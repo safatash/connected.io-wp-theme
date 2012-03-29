@@ -32,29 +32,22 @@
 				<div id="myCarousel" class="carousel">
           <!-- Carousel items -->
           <div class="carousel-inner">
-            <div class="active item">
-              <blockquote>"The Internet isn’t really a technology. It’s a belief system, a philosophy about the effectiveness of decentralized, bottom-up innovation. And it’s a philosophy that has begun to change how we think about creativity itself."
-              </blockquote>
-              <cite>&mdash; <a href="http://www.nytimes.com/2011/12/06/science/joichi-ito-innovating-by-the-seat-of-our-pants.html" />Joi Ito</a></cite>
+          
+          <?php
+        		$query_args = array( 'suppress_filters' => false, 'post_type' => 'quote', 'showposts' => '1000' );
+        		$slides = get_posts( $query_args );
+        		if ( ! empty( $slides ) ) {
+      			$counter = 0;
+      			foreach( $slides as $post ) { setup_postdata( $post ); $counter++;
+      		?>	
+          
+            <div class="item<?php if ($counter == 1) echo ' active'; ?>">
+              <blockquote>"<?php the_content_rss(); ?>"</blockquote>
+              <cite>&mdash; <?php the_excerpt_rss(); ?></cite>
             </div>
-            <div class="item">
-              <blockquote>
-                "One of the best parts of the todays social web is seeing startups build applications, networks and marketplaces that where people can help out others."
-              </blockquote>
-              <cite>&mdash; <a href="http://bijansabet.com/post/18724193618/the-social-web-helping-each-other-out-one-person-at-a">Bijan Sabet</a></cite>
-            </div>
-            <div class="item">
-              <blockquote>
-                "The reality is that the corporations and governments that build, operate, and govern cyberspace are not being held sufficiently accountable for their exercise of power over the lives and identities of people who use digital networks. They are sovereigns operating without the consent of the networked."
-              </blockquote>
-              <cite>&mdash; <a href="http://techpresident.com/news/21723/book-review-consent-networked">Rebecca MacKinnon</a></cite>
-            </div>
-            <div class="item">
-              <blockquote>
-                "The next time you see a piece of legislation that has an impact on an open Internet, software or business method patents, copyright enforcement, free and fair competition, open government, or cyber security, I urge you to see it through the lens of the competition between incumbent industrial hierarchies and emergent networks."
-              </blockquote>
-              <cite>&mdash; <a href="http://www.usv.com/2012/03/the-freedom-to-innovate.php">Brad Burnham</a></cite>
-            </div>
+            
+            <?php } } ?>
+            
           </div>
           <!-- Carousel nav -->
           <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>

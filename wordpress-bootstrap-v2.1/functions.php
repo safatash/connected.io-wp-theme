@@ -58,6 +58,44 @@ You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
+/************* QUOTES ***************************/
+
+add_action( 'init', 'codex_custom_init' );
+function codex_custom_init() {
+  $labels = array(
+    'name' => _x('Quotes', 'post type general name'),
+    'singular_name' => _x('Quote', 'post type singular name'),
+    'add_new' => _x('Add New', 'Quote'),
+    'add_new_item' => __('Add New Quote'),
+    'edit_item' => __('Edit Quote'),
+    'new_item' => __('New Quote'),
+    'all_items' => __('All Quotes'),
+    'view_item' => __('View Quote'),
+    'search_items' => __('Search Quotes'),
+    'not_found' =>  __('No Quotes found'),
+    'not_found_in_trash' => __('No Quotes found in Trash'), 
+    'parent_item_colon' => '',
+    'menu_name' => 'Quotes'
+
+  );
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => true, 
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+  ); 
+  register_post_type('quote',$args);
+}
+
+
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
