@@ -76,6 +76,12 @@
     <!--<script src="<?php echo get_template_directory_uri(); ?>/js/less-1.2.1.min.js"></script>-->
 		
 		<?php wp_footer(); // js scripts are inserted using this function ?>
+		
+		<script type="text/javascript">
+		  $.('#myCarousel').carousel({
+		    interval: 2000;
+		  });
+		</script>
 
 	</body>
 

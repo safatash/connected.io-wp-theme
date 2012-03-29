@@ -130,6 +130,22 @@ body {
   text-indent: -9999px;
   height: 100px;
 }
+/* Homepage Carousel */
+.carousel blockquote {
+  margin: 0 80px;
+  font: 24px georgia;
+  line-height: 1.4em;
+  font-style: italic;
+  color: #999999;
+  border-left: none;
+}
+.carousel cite {
+  margin: 20px 120px;
+  display: block;
+  text-align: right;
+  font-size: 1.2em;
+  color: #999999;
+}
 #main article {
   border-bottom: none !important;
 }
