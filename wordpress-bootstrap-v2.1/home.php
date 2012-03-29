@@ -45,6 +45,12 @@
             </div>
             <div class="item">
               <blockquote>
+                "The reality is that the corporations and governments that build, operate, and govern cyberspace are not being held sufficiently accountable for their exercise of power over the lives and identities of people who use digital networks. They are sovereigns operating without the consent of the networked."
+              </blockquote>
+              <cite>&mdash; <a href="http://techpresident.com/news/21723/book-review-consent-networked">Rebecca MacKinnon</a></cite>
+            </div>
+            <div class="item">
+              <blockquote>
                 "The next time you see a piece of legislation that has an impact on an open Internet, software or business method patents, copyright enforcement, free and fair competition, open government, or cyber security, I urge you to see it through the lens of the competition between incumbent industrial hierarchies and emergent networks."
               </blockquote>
               <cite>&mdash; <a href="http://www.usv.com/2012/03/the-freedom-to-innovate.php">Brad Burnham</a></cite>
