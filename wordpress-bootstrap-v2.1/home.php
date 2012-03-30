@@ -54,7 +54,7 @@
           <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
         </div>
         <p style="text-align:center">
-        <a href="http://we.believeinthe.net/tagged/inspiration">More #inspiration</a>
+        <a href="http://blog.netizen.io/tagged/inspiration">More #inspiration</a>
 				</p>
 
 					<?php if (false && have_posts()) : while (have_posts()) : the_post(); ?>
