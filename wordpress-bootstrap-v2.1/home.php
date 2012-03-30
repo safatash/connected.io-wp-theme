@@ -11,7 +11,8 @@
 					
 					<!--<p><?php bloginfo('description'); ?></p>-->
 					<p>
-					Supporting networked collaboration, creation and innovation.
+					Promoting networked collaboration, creation and innovation.<br />
+					Protecting the freedom to innovate.
 					</p>
 				
 				</div>
