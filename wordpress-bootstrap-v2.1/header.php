@@ -35,7 +35,7 @@
 		
 		<!--<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">-->
 		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css" rel="stylesheet">
-		<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.min.css" rel="stylesheet/less">
+		<!--<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.min.css" rel="stylesheet/less">-->
 
 		
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
@@ -51,17 +51,17 @@
 				
 	</head>
 	
-	<body <?php body_class(); ?>>
-				
+	<body <?php body_class(); ?>>				
 		<header role="banner">
 		
 			<div id="inner-header" class="clearfix">
 				
-				<div class="navbar navbar-fixed-top">
+				<div class="navbar navbar-top">
 					<div class="navbar-inner">
 						<div class="container nav-container">
 							<nav role="navigation">
-								<!--<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>-->
+								<a class="brand" id="logo" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+								<p class="tagline"><?php bloginfo('description'); ?></p>
 								
 								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 							        <span class="icon-bar"></span>
@@ -70,10 +70,8 @@
 								</a>
 								
 								<div class="nav-collapse">
-									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+									<?php //bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 								</div>
-								
-							</nav>
 							
 							<?php if(of_get_option('search_bar', '1')) {?>
 							<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
@@ -87,6 +85,18 @@
 			
 			</div> <!-- end #inner-header -->
 		
+										</nav>
+
 		</header> <!-- end header -->
 		
+		<div class="container">
+			 <div class="subnav" style="margin-left:0">
+          <?php wp_nav_menu(array('container' => 'false', 'menu_class' => 'nav nav-pills pull-left', 'menu' => 'Main Nav')); ?>   
+          
+          <?php wp_nav_menu(array('container' => 'false', 'menu_class' => 'nav nav-pills pull-right', 'menu' => 'Secondary Nav')); ?> 
+         
+        </div>
+    </div>
+    
+    		
 		<div class="container">
