@@ -22,7 +22,7 @@
 <br />831 Beacon Street, #168<br />
 Newton, MA 02459</p>
 <p class="contact">
-Netizen is a 501(c)(4) nonprofit organization (status pending)
+Netizen Effect is a 501(c)(4) nonprofit organization (status pending)
 </p>
 
 			
