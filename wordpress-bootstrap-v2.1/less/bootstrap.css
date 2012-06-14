@@ -111,9 +111,11 @@ textarea {
   font-family: Calvert;
   src: url('../fonts/calvermt.ttf');
 }
-#main h1 {
+h2#intro {
   font-family: 'Calvert';
-  margin: .2em 0 .3em !important;
+  font-size: 36px;
+  margin-bottom: 10px !important;
+  letter-spacing: -1px;
 }
 body.home .brand {
   /*visibility: hidden;
@@ -354,10 +356,6 @@ article h1 {
   line-height: 34px!important;
   padding: 5px 0 !important;
   margin-bottom: .5em !important;
-}
-body.home article h2 {
-  color: #bbb;
-  text-align: center;
 }
 .person {
   padding-left: 130px;
