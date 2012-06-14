@@ -14,9 +14,14 @@ The comments page for Bones
   }
 ?>
 
+
+
 <!-- You can start editing here. -->
 
 <?php if ( have_comments() ) : ?>
+	
+	<div class="span8 <?php if (is_page()): ?>offset2<?php endif; ?>">
+	
 	
 	<h3 id="comments"><?php comments_number('<span>' . __("No","bonestheme") . '</span> ' . __("Responses","bonestheme") . '', '<span>' . __("One","bonestheme") . '</span> ' . __("Response","bonestheme") . '', '<span>%</span> ' . __("Responses","bonestheme") );?> <?php _e("to","bonestheme"); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
 
@@ -146,5 +151,6 @@ The comments page for Bones
 	
 	<?php endif; // If registration required and not logged in ?>
 </section>
+</div><!--/.span -->	
 
 <?php endif; // if you delete this the sky will fall on your head ?>
