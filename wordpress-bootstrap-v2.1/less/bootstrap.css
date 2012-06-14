@@ -322,6 +322,7 @@ body.home #content {
   /*the parent element is displayed as a table element*/
 
   height: 11em;
+  width: 100%;
 }
 #myCarousel {
   display: table-cell;
