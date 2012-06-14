@@ -16,7 +16,11 @@
 					</nav>
 					
 				<!-- Begin MailChimp Signup Form -->
-
+				<form class="form-inline validate" action="http://usv.us4.list-manage.com/subscribe/post?u=8421859f947e29f79daa069a1&amp;id=982a0efde2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+				  <label>Stay in touch: &nbsp;&nbsp;</label>
+				  <input type="text" class="input-large" placeholder="Email" id="mce-EMAIL" name="EMAIL">
+				  <button type="submit" name="subscribe" class="btn" id="mc-embedded-subscribe">Go</button>
+				</form>
 
 <p class="contact">
 </p>
@@ -75,11 +79,11 @@
     <!--<script src="<?php echo get_template_directory_uri(); ?>/js/less-1.2.1.min.js"></script>-->
 		
 		<script type="text/javascript">
-  /*$(function(){
+  $(function(){
     $('#myCarousel').carousel({
       interval: 8000
     });
-  })*/
+  })
   </script>
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 

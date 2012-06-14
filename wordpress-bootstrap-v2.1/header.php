@@ -52,7 +52,7 @@
 	</head>
 	
 	<body <?php body_class(); ?>>				
-		<header role="banner">
+		<header role="banner" id="header">
 		
 			<div id="inner-header" class="clearfix">
 				
@@ -82,10 +82,16 @@
 						</div>
 					</div>
 				</div>
+				
+				
 			
 			</div> <!-- end #inner-header -->
+			
+			
 		
 										</nav>
+										
+										
 
 		</header> <!-- end header -->
 		

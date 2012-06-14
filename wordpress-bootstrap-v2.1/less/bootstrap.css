@@ -111,10 +111,7 @@ textarea {
   font-family: Calvert;
   src: url('../fonts/calvermt.ttf');
 }
-h1,
-h2,
-h3,
-h4 {
+#main h1 {
   font-family: 'Calvert';
   margin: .2em 0 .3em !important;
 }
@@ -123,14 +120,17 @@ body.home .brand {
   width: 1px;*/
 
 }
+/*
+  Header
+----------------*/
 header .navbar {
   margin-bottom: 0 !important;
 }
 header .navbar a.brand {
-  background: url(../img/connected_logo_white_350.png) center 20px no-repeat;
-  height: 60px;
+  background: url(../img/connected_innovation_network_logo_white_wide.png) center 20px no-repeat;
+  height: 93px;
   display: block;
-  width: 350px;
+  width: 5  50px;
   text-indent: -9999px;
   margin: 0 auto;
   float: none !important;
@@ -141,37 +141,21 @@ p.tagline {
   text-align: center;
   padding-bottom: 12px;
   font-size: 16px;
+  display: none;
 }
 .nav-collapse {
   display: none;
 }
-#content {
-  padding-top: 0px !important;
-}
-body.home #content {
-  padding-top: 50px !important;
-}
-#content header {
-  display: block;
-}
-.page-header h1 {
-  color: #bbb;
-  text-align: center;
-}
-.page-header {
-  border-bottom: none !important;
-  padding-bottom: 5px !important;
-  margin-top: 0 !important;
-  margin-bottom: 0!important;
-}
 .navbar .nav {
   padding-top: 9px;
 }
+header .navbar-inner {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
 body.home .subnav {
   margin-bottom: 30px !important;
-}
-.subnav {
-  display: none;
 }
 /* Subnav */
 .subnav {
@@ -291,6 +275,27 @@ body.home .subnav {
     border-radius: 0;
   }
 }
+/* Main Content
+---------------------*/
+#content {
+  padding-top: 0px !important;
+}
+body.home #content {
+  /*padding-top: 20px !important;*/
+
+}
+#content header {
+  display: block;
+}
+.page-header h1 {
+  color: #bbb;
+}
+.page-header {
+  border-bottom: none !important;
+  padding-bottom: 5px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0!important;
+}
 .page-template-page-homepage-php .hero-unit, .blog .hero-unit {
   padding: 40px 0 20px !important;
 }
@@ -310,8 +315,22 @@ body.home .subnav {
 
 }
 /* Homepage Carousel */
+#carousel-container {
+  display: table;
+  /*the parent element is displayed as a table element*/
+
+  height: 11em;
+}
+#myCarousel {
+  display: table-cell;
+  /*the centered element is displayed as a table cell*/
+
+  vertical-align: middle;
+  /*the css property vertical-align with value middle to center vertically the element*/
+
+}
 .carousel blockquote {
-  margin: 0 50px;
+  margin: 0 30px;
   font: 22px georgia;
   line-height: 1.4em;
   font-style: italic;
@@ -319,7 +338,7 @@ body.home .subnav {
   border-left: none;
 }
 .carousel cite {
-  margin: 0 80px 10px;
+  margin: 10px 40px 0px;
   display: block;
   text-align: right;
   font-size: 1em;
@@ -335,7 +354,6 @@ article h1 {
   line-height: 34px!important;
   padding: 5px 0 !important;
   margin-bottom: .5em !important;
-  text-align: center;
 }
 body.home article h2 {
   color: #bbb;
@@ -527,7 +545,7 @@ a:hover {
   width: 99.99999998999999%;
 }
 .container {
-  width: 620px;
+  width: 940px;
   margin-left: auto;
   margin-right: auto;
   *zoom: 1;

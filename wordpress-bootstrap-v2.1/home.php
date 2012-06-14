@@ -24,6 +24,8 @@
 				  <li><a href="">Hi</a></li>
 				</ul>-->
 				
+				
+				<div class="well" id="carousel-container">
 				<div id="myCarousel" class="carousel slide">
           <!-- Carousel items -->
           <div class="carousel-inner">
@@ -45,16 +47,29 @@
             
           </div>
           <!-- Carousel nav -->
+          <!--
           <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
           <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        -->
         </div>
-        <p style="text-align:center">
-        <a href="http://blog.netizen.io/tagged/inspiration">More #inspiration</a>
-				</p>
+    </div>
+    
+    <div class="row">
+	    <div class="span6">
+		    We believe in the net
+		</div><!--/.span-->
+		<div class="span6">
+	    	Projects
+	    </div><!--/.span-->
+	    
+	</div><!--/.row -->
+        
+		
+	<div class="row">
 
-					<?php if (false && have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix span6'); ?> role="article">
 						
 						<header>
 						
@@ -62,7 +77,7 @@
 							
 							<div class="page-header"><h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1></div>
 							
-							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
+							<p class="meta"><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> </p>
 						
 						</header> <!-- end article header -->
 					
@@ -96,6 +111,9 @@
 					<?php } ?>		
 					
 					<?php endif; ?>
+					
+	</div><!-- /.row -->					
+					
 			
 				</div> <!-- end #main -->
     
