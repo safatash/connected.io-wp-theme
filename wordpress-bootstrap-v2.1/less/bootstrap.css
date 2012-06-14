@@ -358,6 +358,9 @@ article h1 {
   padding: 5px 0 !important;
   margin-bottom: .5em !important;
 }
+#disqus_thread {
+  width: 600px;
+}
 .person {
   padding-left: 130px;
   position: relative;
