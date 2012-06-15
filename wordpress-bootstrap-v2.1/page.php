@@ -2,34 +2,7 @@
 			
 			<div id="content" class="clearfix row-fluid">
 			
-			<?php if (is_page('about')) : ?>
-			<div id="myCarousel" class="carousel slide">
-          <!-- Carousel items -->
-          <div class="carousel-inner">
-          
-          <?php
-        		$query_args = array( 'suppress_filters' => false, 'post_type' => 'quote', 'showposts' => '1000' );
-        		$slides = get_posts( $query_args );
-        		if ( ! empty( $slides ) ) {
-      			$counter = 0;
-      			foreach( $slides as $post ) { setup_postdata( $post ); $counter++;
-      		?>	
-          
-            <div class="item<?php if ($counter == 1) echo ' active'; ?>">
-              <blockquote>"<?php the_content_rss(); ?>"</blockquote>
-              <cite>&mdash; <?php the_excerpt_rss(); ?></cite>
-            </div>
-            
-            <?php } } ?>
-            
-          </div>
-          <!-- Carousel nav -->
-          <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-          <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
-        </div>
-			<?php endif; ?>
-			
-				<div id="main" class="span12 clearfix" role="main">
+				<div id="main" class="span8 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -78,7 +51,7 @@
 			
 				</div> <!-- end #main -->
     
-				<?php //get_sidebar(); // sidebar 1 ?>
+				<?php get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
 
