@@ -80,9 +80,14 @@
 		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 		-->
 		</div>
+		
 	</div>
+	<p class="pull-right">
+		<a href="http://blog.connected.io/tagged/inspiration">More #inspiration</a>
+	</p>	
 
-	<hr />
+	
+	<p class="label label-info" style="clear:both">Highlights from <a style="color: #fff; text-decoration:underline" href="http://blog.connected.io">the blog</a></p>
 	
 	<div class="row">
 
@@ -131,7 +136,11 @@
 					
 					<?php endif; ?>
 					
-	</div><!-- /.row -->					
+	</div><!-- /.row -->	
+	
+	<p class="label label-info">Who we are</p>
+	
+		
 					
 			
 				</div> <!-- end #main -->
