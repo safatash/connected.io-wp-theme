@@ -377,6 +377,13 @@ article h1 {
   width: 110px;
   height: 110px;
 }
+/* Sidebar
+----------------*/
+.widget_search .add-on {
+  display: none;
+}
+/* Footer
+----------------*/
 footer {
   text-align: center;
 }
