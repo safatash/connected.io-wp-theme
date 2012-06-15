@@ -380,7 +380,7 @@ article h1 {
 /* Sidebar
 ----------------*/
 .widget_search .add-on {
-  display: none;
+  display: none !important;
 }
 /* Footer
 ----------------*/
