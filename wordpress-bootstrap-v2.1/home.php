@@ -35,7 +35,6 @@
 		    	setup_postdata( $pages[0] );
 		    ?>
 		    
-		    <h2 id="intro">We believe in the Net.</h2>
 		    <?php the_content(); ?>
 		
 			<?php 
