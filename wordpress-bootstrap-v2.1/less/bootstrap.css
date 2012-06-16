@@ -133,7 +133,7 @@ header .navbar {
 }
 header .navbar a.brand {
   background: url(../img/logo_connected_io_white_wide.png) left 20px no-repeat;
-  height: 80px;
+  height: 73px;
   display: block;
   width: 5  50px;
   text-indent: -9999px;
@@ -295,6 +295,7 @@ body.home .subnav {
   margin-left: -198px;
   padding-left: 20px;
   float: left;
+  color: #666;
 }
 #main p.node {
   margin-left: -239px;
