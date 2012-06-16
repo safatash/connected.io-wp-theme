@@ -111,7 +111,7 @@
 						</header> <!-- end article header -->
 					
 						<section class="post_content clearfix">
-							<?php the_content( __("Read more &raquo;","bonestheme") ); ?>
+							<?php the_excerpt( __("Read more &raquo;","bonestheme") ); ?>
 						</section> <!-- end article section -->
 						
 						<footer>
