@@ -93,6 +93,7 @@ function codex_custom_init() {
     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
   ); 
   register_post_type('quote',$args);
+  
 }
 
 

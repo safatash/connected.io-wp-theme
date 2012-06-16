@@ -59,6 +59,7 @@
 		  <div class="carousel-inner">
 
 		  <?php
+				$tmp_post = $post;
 				$query_args = array( 'suppress_filters' => false, 'post_type' => 'quote', 'showposts' => '1000' );
 				$slides = get_posts( $query_args );
 				if ( ! empty( $slides ) ) {
@@ -71,7 +72,9 @@
 			  <cite>&mdash; <?php the_excerpt_rss(); ?></cite>
 			</div>
 
-			<?php } } ?>
+			<?php } } 
+			$post = $tmp_post;
+			?>
 
 		  </div>
 		  <!-- Carousel nav -->
@@ -85,9 +88,11 @@
 	<p class="pull-right">
 		<a href="http://blog.connected.io/tagged/inspiration">More #inspiration</a>
 	</p>	
-
 	
-	<p class="label label-warning" style="clear:both">Highlights from <a style="color: #fff; text-decoration:underline" href="http://blog.connected.io">the blog</a></p>
+	
+	<!--<p class="label label-warning" style="clear:both">Highlights from <a style="color: #fff; text-decoration:underline" href="http://blog.connected.io">the blog</a></p>-->
+	
+	<hr style="clear:both"/>
 	
 	<div class="row">
 
@@ -137,8 +142,6 @@
 					<?php endif; ?>
 					
 	</div><!-- /.row -->	
-	
-	
 					
 			
 	
