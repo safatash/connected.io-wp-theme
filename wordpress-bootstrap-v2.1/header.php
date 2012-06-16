@@ -1,5 +1,5 @@
-<?php if (!current_user_can('administrator')) {
-	header('Location: ./hello.html');
+<?php if (!current_user_can('administrator') && !strstr($_SERVER['REQUEST_URI'],'login')) {
+	header('Location: http://connected.io/hello.html');
 }
 ?>
 <!doctype html>  
