@@ -2,6 +2,14 @@
 			
 				<div id="inner-footer" class="clearfix">
 		          <hr />
+
+				<!-- Begin MailChimp Signup Form -->
+				<form class="form-inline validate" action="http://usv.us4.list-manage.com/subscribe/post?u=8421859f947e29f79daa069a1&amp;id=982a0efde2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+				  <label>Stay in touch: &nbsp;&nbsp;</label>
+				  <input type="text" class="input-large" placeholder="Email" id="mce-EMAIL" name="EMAIL">
+				  <button type="submit" name="subscribe" class="btn" id="mc-embedded-subscribe">Go</button>
+				</form>
+
 		          <div id="widget-footer" class="clearfix row-fluid">
 		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
 		            <?php endif; ?>
@@ -14,16 +22,6 @@
 					<nav class="clearfix">
 						<?php bones_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
-					
-				<!-- Begin MailChimp Signup Form -->
-				<form class="form-inline validate" action="http://usv.us4.list-manage.com/subscribe/post?u=8421859f947e29f79daa069a1&amp;id=982a0efde2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-				  <label>Stay in touch: &nbsp;&nbsp;</label>
-				  <input type="text" class="input-large" placeholder="Email" id="mce-EMAIL" name="EMAIL">
-				  <button type="submit" name="subscribe" class="btn" id="mc-embedded-subscribe">Go</button>
-				</form>
-
-<p class="contact">
-</p>
 
 			
 					<!--<p class="attribution">&copy; <?php bloginfo('name'); ?></p>-->
