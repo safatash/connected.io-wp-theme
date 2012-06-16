@@ -138,22 +138,7 @@
 					
 	</div><!-- /.row -->	
 	
-	<p class="label label-warning">Who we are</p>
 	
-		<?php
-			$tmp_post = $post;
-			$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'team' );
-			$pages = get_posts( $query_args );
-			if ( ! empty( $pages ) ) :
-				setup_postdata( $pages[0] );
-			?>
-			
-			<?php the_content(); ?>
-		
-			<?php 
-			endif; 
-			$post = $tmp_post;
-			?>		
 					
 			
 	
