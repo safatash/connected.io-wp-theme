@@ -83,9 +83,45 @@
 		</div>
 		
 	</div>
-	
-	<hr />
 
+	<hr />
+	
+		<h2 class="node">the network</h2>
+		<?php
+		$tmp_post = $post;
+		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'network' );
+		$pages = get_posts( $query_args );
+		if ( ! empty( $pages ) ) :
+			setup_postdata( $pages[0] );
+		?>
+		
+		<?php the_content(); ?>
+	
+		<?php 
+		endif; 
+		$post = $tmp_post;
+		?>	
+
+	<hr />
+	
+		<h2 class="node">the network</h2>
+		<?php
+		$tmp_post = $post;
+		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'awesome' );
+		$pages = get_posts( $query_args );
+		if ( ! empty( $pages ) ) :
+			setup_postdata( $pages[0] );
+		?>
+		
+		<?php the_content(); ?>
+	
+		<?php 
+		endif; 
+		$post = $tmp_post;
+		?>	
+
+
+	<hr />
 	
 		<h2 class="node">team</h2>
 		<?php
@@ -157,6 +193,14 @@
 					<?php } ?>		
 					
 					<?php endif; ?>
+					
+    <h2 class="node">connect</h2>
+    
+    <form class="form-inline validate" action="http://usv.us4.list-manage.com/subscribe/post?u=8421859f947e29f79daa069a1&amp;id=982a0efde2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+				  <label>Stay in touch: &nbsp;&nbsp;</label>
+				  <input type="text" class="input-large" placeholder="Email" id="mce-EMAIL" name="EMAIL">
+				  <button type="submit" name="subscribe" class="btn" id="mc-embedded-subscribe">Go</button>
+				</form>
 	
 	</div> <!-- end #main -->
     
