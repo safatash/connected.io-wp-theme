@@ -47,9 +47,6 @@
 			endif; 
 			$post = $tmp_post;
 			?>	
-			
-	    	<iframe src="http://app.sliderocket.com:80/app/fullplayer.aspx?id=57a7d7bf-8efc-4401-bab3-2a86fdecabe6" width="458" height="370" scrolling=no frameBorder="0" style="border:1px solid #ddd;"></iframe>
-
 	
 	<hr />
 	
@@ -86,7 +83,25 @@
 		</div>
 		
 	</div>
-	<p class="pull-right">
+	
+	<hr />
+
+	
+		<h2 class="node">team</h2>
+		<?php
+		$tmp_post = $post;
+		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'team' );
+		$pages = get_posts( $query_args );
+		if ( ! empty( $pages ) ) :
+			setup_postdata( $pages[0] );
+		?>
+		
+		<?php the_content(); ?>
+	
+		<?php 
+		endif; 
+		$post = $tmp_post;
+		?>	
 	
 	
 	<!--<p class="label label-warning" style="clear:both">Highlights from <a style="color: #fff; text-decoration:underline" href="http://blog.connected.io">the blog</a></p>-->
