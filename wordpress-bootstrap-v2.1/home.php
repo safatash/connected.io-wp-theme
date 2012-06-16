@@ -87,7 +87,7 @@
 	</p>	
 
 	
-	<p class="label label-info" style="clear:both">Highlights from <a style="color: #fff; text-decoration:underline" href="http://blog.connected.io">the blog</a></p>
+	<p class="label label-warning" style="clear:both">Highlights from <a style="color: #fff; text-decoration:underline" href="http://blog.connected.io">the blog</a></p>
 	
 	<div class="row">
 
@@ -138,12 +138,26 @@
 					
 	</div><!-- /.row -->	
 	
-	<p class="label label-info">Who we are</p>
+	<p class="label label-warning">Who we are</p>
 	
+		<?php
+			$tmp_post = $post;
+			$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'team' );
+			$pages = get_posts( $query_args );
+			if ( ! empty( $pages ) ) :
+				setup_postdata( $pages[0] );
+			?>
+			
+			<?php the_content(); ?>
 		
+			<?php 
+			endif; 
+			$post = $tmp_post;
+			?>		
 					
 			
-				</div> <!-- end #main -->
+	
+	</div> <!-- end #main -->
     
 				<?php //get_sidebar(); // sidebar 1 ?>
     

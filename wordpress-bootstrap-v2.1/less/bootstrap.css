@@ -117,6 +117,9 @@ h2#intro {
   margin-bottom: 10px !important;
   letter-spacing: -1px;
 }
+.label.label-warning {
+  background-color: #f7a400;
+}
 body.home .brand {
   /*visibility: hidden;
   width: 1px;*/
