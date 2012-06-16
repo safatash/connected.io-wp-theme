@@ -402,6 +402,12 @@ footer hr {
   border: none;
   border-bottom: 1px solid #ccc;
 }
+footer ul.menu {
+  text-align: center;
+}
+footer ul.menu li {
+  display: inline;
+}
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
