@@ -1,3 +1,7 @@
+<?php if (!current_user_can('administrator')) {
+	header('Location: ./hello.html');
+}
+?>
 <!doctype html>  
 
 <!--[if IEMobile 7 ]> <html <?php language_attributes(); ?>class="no-js iem7"> <![endif]-->
