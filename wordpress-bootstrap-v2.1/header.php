@@ -99,6 +99,7 @@
 
 		</header> <!-- end header -->
 		
+		<?php /*
 		<div class="container">
 			 <div class="subnav" style="margin-left:0">
           <?php wp_nav_menu(array('container' => 'false', 'menu_class' => 'nav nav-pills pull-left', 'menu' => 'Main Nav')); ?>   
@@ -107,6 +108,7 @@
          
         </div>
     </div>
+    */ ?>
     
     		
 		<div class="container">

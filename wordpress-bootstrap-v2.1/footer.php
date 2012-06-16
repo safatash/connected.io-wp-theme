@@ -81,6 +81,7 @@
     $('#myCarousel').carousel({
       interval: 8000
     });
+    $('#timeline').height($('#main').height());
   })
   </script>
 		<?php wp_footer(); // js scripts are inserted using this function ?>

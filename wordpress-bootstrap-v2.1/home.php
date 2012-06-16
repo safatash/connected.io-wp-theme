@@ -16,8 +16,15 @@
 			?>
 			
 			<div id="content" class="clearfix row-fluid">
+				
+				<div class="span3">
+					<div class="well" id="timeline" style="border-right:none">
+						&nbsp;
+					</div><!-- /.well -->
+				</div><!-- /.span2 -->
 			
-				<div id="main" class="span12 clearfix" role="main">
+				<div id="main" class="span9 clearfix" role="main">
+					
 				
 				<!--<ul class="nav nav-pills">
 				  <li class="active"><a href="">Hi</a></li>
@@ -26,7 +33,8 @@
 				
 				
     <div class="row">
-	    <div class="span6">
+	    <div class="span9">
+		    <h2 class="node">hi</h2>
 		    <?php
 		    $tmp_post = $post;
 		    $query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'intro' );
@@ -50,9 +58,10 @@
 	    </div><!--/.span-->
 	    
 	</div><!--/.row -->
-        
+	
 	<hr />
 	
+	<h2 class="node"><a href="http://blog.connected.io/tagged/inspiration">#inspiration</a></h2>
 				<div class="well" id="carousel-container">
 				<div id="myCarousel" class="carousel slide">
 		  <!-- Carousel items -->
@@ -86,13 +95,13 @@
 		
 	</div>
 	<p class="pull-right">
-		<a href="http://blog.connected.io/tagged/inspiration">More #inspiration</a>
-	</p>	
 	
 	
 	<!--<p class="label label-warning" style="clear:both">Highlights from <a style="color: #fff; text-decoration:underline" href="http://blog.connected.io">the blog</a></p>-->
 	
 	<hr style="clear:both"/>
+	
+	<h2 class="node">blog</h2>
 	
 	<div class="row">
 
