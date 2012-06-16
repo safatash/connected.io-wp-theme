@@ -32,7 +32,7 @@
 				</ul>-->
 				
 				
-		    <h2 class="node">hi</h2>
+		    <h2 class="node">hello</h2>
 		    <?php
 		    $tmp_post = $post;
 		    $query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'intro' );
@@ -111,7 +111,7 @@
 						</header> <!-- end article header -->
 					
 						<section class="post_content clearfix">
-							<?php the_content( __("Read more &raquo;","bonestheme") ); ?>
+							<?php the_excerpt( __("Read more &raquo;","bonestheme") ); ?>
 						</section> <!-- end article section -->
 						
 						<footer>
