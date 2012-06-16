@@ -32,8 +32,6 @@
 				</ul>-->
 				
 				
-    <div class="row">
-	    <div class="span9">
 		    <h2 class="node">hi</h2>
 		    <?php
 		    $tmp_post = $post;
@@ -49,15 +47,9 @@
 			endif; 
 			$post = $tmp_post;
 			?>	
-		    		
-		   
-		</div><!--/.span-->
-		<div class="span6">
 			
 	    	<iframe src="http://app.sliderocket.com:80/app/fullplayer.aspx?id=57a7d7bf-8efc-4401-bab3-2a86fdecabe6" width="458" height="370" scrolling=no frameBorder="0" style="border:1px solid #ddd;"></iframe>
-	    </div><!--/.span-->
-	    
-	</div><!--/.row -->
+
 	
 	<hr />
 	
@@ -103,11 +95,10 @@
 	
 	<h2 class="node"><a href="http://blog.connected.io">blog</a></h2>
 	
-	<div class="row">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix span6'); ?> role="article">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						
 						<header>
 						
@@ -149,10 +140,6 @@
 					<?php } ?>		
 					
 					<?php endif; ?>
-					
-	</div><!-- /.row -->	
-					
-			
 	
 	</div> <!-- end #main -->
     
