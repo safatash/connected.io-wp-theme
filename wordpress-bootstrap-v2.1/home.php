@@ -101,7 +101,7 @@
 	
 	<hr style="clear:both"/>
 	
-	<h2 class="node">blog</h2>
+	<h2 class="node"><a href="http://blog.connected.io">blog</a></h2>
 	
 	<div class="row">
 
