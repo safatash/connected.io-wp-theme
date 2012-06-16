@@ -23,7 +23,7 @@
 					</div><!-- /.well -->
 				</div><!-- /.span2 -->
 			
-				<div id="main" class="span9 clearfix" role="main">
+				<div id="main" class="span8 clearfix" role="main">
 					
 				
 				<!--<ul class="nav nav-pills">
