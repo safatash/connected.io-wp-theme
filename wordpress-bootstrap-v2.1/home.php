@@ -1,20 +1,5 @@
 <?php get_header(); ?>
-			
-			<?php
-				$blog_hero = of_get_option('blog_hero');
-				if ($blog_hero){
-			?>
-			<div class="clearfix row-fluid" style="display:none">
-				<div class="hero-unit">
-									
-					<p><?php bloginfo('description'); ?></p>
-				
-				</div>
-			</div>
-			<?php
-				}
-			?>
-			
+
 			<div id="content" class="clearfix row-fluid">
 				
 				<div class="span3">

@@ -312,7 +312,7 @@ body.home .subnav {
   */
 
   border: none !important;
-  border-left: 8px solid #eee !important;
+  border-left: 3px solid #eee !important;
   -webkit-border-radius: 0 4px 4px 4px;
   -moz-border-radius: 0 4px 4px 4px;
   border-radius: 0 4px 4px 4px;
@@ -343,7 +343,7 @@ body.home .subnav {
 /* Main Content
 ---------------------*/
 #content {
-  padding-top: 30px !important;
+  padding-top: 40px !important;
 }
 body.home #content {
   /*padding-top: 20px !important;*/

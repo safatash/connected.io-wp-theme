@@ -81,11 +81,14 @@
   var words = [
   	'health',
   	'learning',
+  	'energy',
   	'creativity',
   	'workforce',
   	'transportation',
-  	'governance',
+  	'government',
+  	'disaster relief',
   	'economies',
+  	'innovation',
   	'innovation',
   	'innovation',
   	'IO'
