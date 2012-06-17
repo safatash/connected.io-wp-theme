@@ -83,8 +83,6 @@
   	'learning',
   	'transportation',
   	'innovation',
-  	'innovation',
-  	'innovation',
   	'IO'
   ];
   
@@ -93,8 +91,13 @@
   function nextWord() {
 	if (counter == words.length) return;
 	
+	$('#dot-something').removeClass('innovation');
+	
 	if (words[counter] == 'innovation') {
-		$('#dot-something span').addClass('foo');
+		$('#dot-something').addClass('innovation');
+	}
+	if (words[counter] == 'IO') {
+		$('#dot-something').addClass('io');
 	}
 
   	$('#dot-something')
