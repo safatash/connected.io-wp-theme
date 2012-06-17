@@ -151,6 +151,10 @@ span#dot-something {
   text-transform: uppercase;
   left: 637px;
 }
+span#dot-something.innovation {
+  top: 39px;
+  color: #fdbb63;
+}
 span#dot-something.io {
   font-family: 'Calvert';
   font-size: 50px;
