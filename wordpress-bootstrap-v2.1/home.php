@@ -85,6 +85,7 @@
 	</div>
 	
 	<hr />
+
 	
 		<h2 class="node">team</h2>
 		<?php
