@@ -151,6 +151,7 @@
 
 
 	<hr />
+
 	
 		<?php
 		$tmp_post = $post;

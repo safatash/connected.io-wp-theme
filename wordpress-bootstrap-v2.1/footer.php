@@ -76,6 +76,36 @@
     });
     $('#timeline').height($('#main').height());
   })
+
+
+  var words = [
+  	'health',
+  	'learning',
+  	'transportation',
+  	'innovation',
+  	'innovation',
+  	'innovation',
+  	'IO'
+  ];
+  
+  var counter = 0;
+  
+  function nextWord() {
+	if (counter == words.length) return;
+	
+	if (words[counter] == 'innovation') {
+		$('#dot-something span').addClass('foo');
+	}
+
+  	$('#dot-something')
+		.text(words[counter])
+	;
+	
+  	counter++;
+  }
+  
+  setInterval(nextWord,750);
+
   </script>
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 

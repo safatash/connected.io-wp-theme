@@ -55,7 +55,9 @@
 				
 	</head>
 	
-	<body <?php body_class(); ?>>				
+	<body <?php body_class(); ?>>			
+	
+	<?php /*	
 		<header role="banner" id="header">
 		
 			<div id="inner-header" class="clearfix">
@@ -65,6 +67,9 @@
 						<div class="container nav-container">
 							<nav role="navigation">
 								<a class="brand" id="logo" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+								<span id="dot-something">
+									<img src="<?php bloginfo('template_directory'); ?>/img/dot-innovation-gray.png" />
+								</span>
 								<p class="tagline"><?php bloginfo('description'); ?></p>
 								
 								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -99,6 +104,8 @@
 
 		</header> <!-- end header -->
 		
+		*/ ?>
+		
 		<?php /*
 		<div class="container">
 			 <div class="subnav" style="margin-left:0">
@@ -109,6 +116,17 @@
         </div>
     </div>
     */ ?>
+    
+    <header role="banner" id="header" class="navbar-inner" style="padding: 20px 0 0 25px;">
+	    <div class="container">
+			<img style="margin-bottom:-7px" id="banner-connected" src="<?php bloginfo('template_directory'); ?>/img/logo_connected_dot_fff.png" />	 
+			<span id="dot-something">
+				<!-- js will add -->
+			</span>
+			   
+		</div>
+	
+	</header>
     
     		
 		<div class="container">
