@@ -31,15 +31,18 @@
 				  <li><a href="">Hi</a></li>
 				</ul>-->
 				
-				
-		    <h2 class="node">hello</h2>
+
 		    <?php
 		    $tmp_post = $post;
 		    $query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'intro' );
 		    $pages = get_posts( $query_args );
 		    if ( ! empty( $pages ) ) :
 		    	setup_postdata( $pages[0] );
-		    ?>
+		    ?>				
+		    <h2 class="node">hello
+		    <?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
+		    </h2>
+
 		    
 		    <?php the_content(); ?>
 		
@@ -85,8 +88,6 @@
 	</div>
 
 	<hr />
-	
-		<h2 class="node">the network</h2>
 		<?php
 		$tmp_post = $post;
 		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'network' );
@@ -94,6 +95,10 @@
 		if ( ! empty( $pages ) ) :
 			setup_postdata( $pages[0] );
 		?>
+
+		<h2 class="node">the network
+		<?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
+		</h2>
 		
 		<?php the_content(); ?>
 	
@@ -104,14 +109,17 @@
 
 	<hr />
 	
-		<h2 class="node">the network</h2>
-		<?php
+			<?php
 		$tmp_post = $post;
 		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'awesome' );
 		$pages = get_posts( $query_args );
 		if ( ! empty( $pages ) ) :
 			setup_postdata( $pages[0] );
 		?>
+	
+		<h2 class="node">/awesome
+			<?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
+		</h2>
 		
 		<?php the_content(); ?>
 	
@@ -123,7 +131,27 @@
 
 	<hr />
 	
-		<h2 class="node">team</h2>
+		<?php
+		$tmp_post = $post;
+		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'hacking-society' );
+		$pages = get_posts( $query_args );
+		if ( ! empty( $pages ) ) :
+			setup_postdata( $pages[0] );
+		?>
+		<h2 class="node">#hacksociety
+		<?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
+		</h2>
+		
+		<?php the_content(); ?>
+	
+		<?php 
+		endif; 
+		$post = $tmp_post;
+		?>	
+
+
+	<hr />
+	
 		<?php
 		$tmp_post = $post;
 		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'team' );
@@ -131,6 +159,10 @@
 		if ( ! empty( $pages ) ) :
 			setup_postdata( $pages[0] );
 		?>
+	
+		<h2 class="node">who we are
+		<?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
+		</h2>
 		
 		<?php the_content(); ?>
 	
@@ -197,9 +229,8 @@
     <h2 class="node">connect</h2>
     
     <form class="form-inline validate" action="http://usv.us4.list-manage.com/subscribe/post?u=8421859f947e29f79daa069a1&amp;id=982a0efde2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-				  <label>Stay in touch: &nbsp;&nbsp;</label>
-				  <input type="text" class="input-large" placeholder="Email" id="mce-EMAIL" name="EMAIL">
-				  <button type="submit" name="subscribe" class="btn" id="mc-embedded-subscribe">Go</button>
+				  <input type="text" class="input-large" placeholder="Your email" id="mce-EMAIL" name="EMAIL">
+				  <button type="submit" name="subscribe" class="btn btn-info" id="mc-embedded-subscribe">Get an occasional email</button>
 				</form>
 	
 	</div> <!-- end #main -->
