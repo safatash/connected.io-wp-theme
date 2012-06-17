@@ -88,7 +88,12 @@
   var words = [
   	'health',
   	'learning',
+  	'creativity',
+  	'workforce',
   	'transportation',
+  	'governance',
+  	'economies',
+  	'innovation',
   	'innovation',
   	'IO'
   ];
@@ -100,13 +105,18 @@
 	
 	$('#dot-something').removeClass('innovation');
 	
-	if (words[counter] == 'innovation') {
-		$('#dot-something').addClass('innovation');
-	}
 	if (words[counter] == 'IO') {
-		$('#dot-something').addClass('io');
+		$('#dot-something')
+			.hide()
+			.addClass('io')
+			.text('IO')
+			.fadeIn(500,'linear')
+		;
+		counter++;
+		return;
 	}
-
+	
+	/* default */
   	$('#dot-something')
 		.text(words[counter])
 	;
@@ -114,7 +124,7 @@
   	counter++;
   }
   
-  setInterval(nextWord,750);
+  setInterval(nextWord,500);
 
   </script>
 		<?php wp_footer(); // js scripts are inserted using this function ?>
