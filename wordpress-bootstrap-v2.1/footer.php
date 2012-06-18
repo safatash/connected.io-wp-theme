@@ -87,17 +87,25 @@
   	'transportation',
   	'government',
   	'disaster relief',
+  	'neighborhoods',
   	'economies',
+  	'cities',
   	'innovation',
   	'innovation',
   	'innovation',
   	'IO'
   ];
   
+  
   var counter = 0;
   
   function nextWord() {
-	if (counter == words.length) return;
+	/* its over */
+	if (counter >= words.length) {
+		counter++;
+		clearInterval(intervalId);
+		return;
+	} 
 	
 	$('#dot-something').removeClass('innovation');
 	
@@ -112,6 +120,15 @@
 		return;
 	}
 	
+	if (counter == words.length - 1) {
+		alert('hi')
+		$('#dot-something')
+			.fadeOut(500)
+		;
+		counter++;
+		return;
+	}
+	
 	/* default */
   	$('#dot-something')
 		.text(words[counter])
@@ -120,7 +137,7 @@
   	counter++;
   }
   
-  setInterval(nextWord,500);
+  var intervalId = setInterval(nextWord,500);
 
   </script>
 		<?php wp_footer(); // js scripts are inserted using this function ?>
