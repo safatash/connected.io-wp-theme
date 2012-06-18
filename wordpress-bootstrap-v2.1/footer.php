@@ -82,15 +82,12 @@
   	'health',
   	'learning',
   	'energy',
-  	'creativity',
-  	'workforce',
+  	'arts',
   	'transportation',
   	'government',
-  	'disaster relief',
+  	'crisis response',
   	'neighborhoods',
-  	'economies',
   	'cities',
-  	'innovation',
   	'innovation',
   	'innovation',
   	'IO'
@@ -137,8 +134,11 @@
   	counter++;
   }
   
+  <?php if (is_home()) : ?>
   var intervalId = setInterval(nextWord,500);
-
+  <?php else: ?>
+  $('#dot-something').text('IO').addClass('io');
+  <?php endif; ?>
   </script>
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 
