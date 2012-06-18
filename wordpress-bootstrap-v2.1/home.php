@@ -24,7 +24,7 @@
 			?>
 			
 			<h2 class="node">
-				<?php the_title(); ?><br />
+				<?php io_the_title(); ?><br />
 				<small><?php edit_post_link('edit'); ?></small>	
 			</h2>
 			

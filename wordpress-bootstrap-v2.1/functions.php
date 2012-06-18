@@ -133,6 +133,19 @@ function io_show_quotes() {
 	<?php
 }
 
+function io_the_title() {
+	global $post;
+	$a;
+	$slash_a;
+	
+	$url = get_post_meta($post->ID,'io-page-links-to',true);
+	if ($url != '') {
+		$a = '<a href="'.$url.'">';
+		$slash_a = '</a>';
+	}
+	echo $a . $post->post_title . $slash_a;
+}
+
 
 /************* ACTIVE SIDEBARS ********************/
 
