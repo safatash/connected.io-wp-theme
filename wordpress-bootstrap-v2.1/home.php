@@ -16,87 +16,41 @@
 				  <li><a href="">Hi</a></li>
 				</ul>-->
 				
-				
-		    <h2 class="node">hello</h2>
-		    <?php
-		    $tmp_post = $post;
-		    $query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'intro' );
-		    $pages = get_posts( $query_args );
-		    if ( ! empty( $pages ) ) :
-		    	setup_postdata( $pages[0] );
-		    ?>
-		    
-		    <?php the_content(); ?>
-		
-			<?php 
-			endif; 
-			$post = $tmp_post;
-			?>	
-	
-	<hr />
-	
-	<h2 class="node"><a href="http://blog.connected.io/tagged/inspiration">#inspiration</a></h2>
-				<div class="well" id="carousel-container">
-				<div id="myCarousel" class="carousel slide">
-		  <!-- Carousel items -->
-		  <div class="carousel-inner">
-
-		  <?php
-				$tmp_post = $post;
-				$query_args = array( 'suppress_filters' => false, 'post_type' => 'quote', 'showposts' => '1000' );
-				$slides = get_posts( $query_args );
-				if ( ! empty( $slides ) ) {
-	  			$counter = 0;
-	  			foreach( $slides as $post ) { setup_postdata( $post ); $counter++;
-	  		?>	
-
-			<div class="item<?php if ($counter == 1) echo ' active'; ?>">
-			  <blockquote>"<?php the_content_rss(); ?>"</blockquote>
-			  <cite>&mdash; <?php the_excerpt_rss(); ?></cite>
-			</div>
-
-			<?php } } 
-			$post = $tmp_post;
+			<?php
+			query_posts('post_type=page&meta_key=homepage-feature&meta_value=true');
+			if (have_posts()) :
+				while(have_posts()):
+					the_post();
 			?>
-
-		  </div>
-		  <!-- Carousel nav -->
-		  <!--
-		  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-		-->
-		</div>
-		
-	</div>
-	
-	<hr />
-
-	
-		<h2 class="node">team</h2>
-		<?php
-		$tmp_post = $post;
-		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'team' );
-		$pages = get_posts( $query_args );
-		if ( ! empty( $pages ) ) :
-			setup_postdata( $pages[0] );
-		?>
-		
-		<?php the_content(); ?>
-	
-		<?php 
-		endif; 
-		$post = $tmp_post;
-		?>	
-	
-	
-	<!--<p class="label label-warning" style="clear:both">Highlights from <a style="color: #fff; text-decoration:underline" href="http://blog.connected.io">the blog</a></p>-->
-	
-	<hr style="clear:both"/>
+			
+			<h2 class="node">
+				<?php the_title(); ?><br />
+				<small><?php edit_post_link('edit'); ?></small>	
+			</h2>
+			
+			<?php the_content(); ?>
+			<?php //print_r($post); ?>
+			
+			<?php if($post->post_name == 'inspiration') :
+					io_show_quotes();
+				  endif; ?>
+			
+			<hr style="clear:both"/>
+			<?php
+				endwhile;
+			endif;
+			?>
+				
+		    	
+			
 	
 	<h2 class="node"><a href="http://blog.connected.io">blog</a></h2>
 	
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php 
+						wp_reset_query();
+						if (have_posts()) : while (have_posts()) : the_post(); 
+					?>
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						
@@ -142,6 +96,14 @@
 					<?php } ?>		
 					
 					<?php endif; ?>
+					
+					
+	<h2 class="node">connect</h2>
+	
+		<form class="form-inline validate" action="http://usv.us4.list-manage.com/subscribe/post?u=8421859f947e29f79daa069a1&amp;id=982a0efde2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+					  <input type="text" class="input-large" placeholder="Your email" id="mce-EMAIL" name="EMAIL">
+					  <button type="submit" name="subscribe" class="btn btn-info" id="mc-embedded-subscribe">Get an occasional email</button>
+					</form>
 	
 	</div> <!-- end #main -->
     
