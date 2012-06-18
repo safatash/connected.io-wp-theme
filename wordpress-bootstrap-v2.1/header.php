@@ -1,4 +1,4 @@
-<?php if (!current_user_can('administrator')) {
+<?php if (!current_user_can('read')) {
 	header('Location: ./hello.html');
 }
 ?>
