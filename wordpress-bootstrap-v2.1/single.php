@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 			
 			<div id="content" class="clearfix row-fluid">
+				
+				<?php get_sidebar(); // sidebar 1 ?>
+
 			
 				<div id="main" class="span8 clearfix" role="main">
 
@@ -60,9 +63,7 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
-    
+        
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>

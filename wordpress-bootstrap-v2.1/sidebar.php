@@ -1,4 +1,5 @@
-				<div id="sidebar1" class="fluid-sidebar sidebar span4" role="complementary">
+				<div id="sidebar1" class="fluid-sidebar sidebar span3" role="complementary">
+					<div class="well">
 				
 					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
@@ -15,5 +16,5 @@
 						</div>
 
 					<?php endif; ?>
-
+					</div><!-- end .well -->
 				</div>

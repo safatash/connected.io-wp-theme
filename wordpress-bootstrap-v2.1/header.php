@@ -117,10 +117,12 @@
     </div>
     */ ?>
     
-    <header role="banner" id="header" class="navbar-inner" style="padding: 20px 0 0 25px;">
+    <header role="banner" id="header" class="navbar-inner" style="padding: 10px 0 0 25px;">
 	    <div class="container">
 		    <div style="position:relative">
-			<img style="margin-bottom:-7px" id="banner-connected" src="<?php bloginfo('template_directory'); ?>/img/logo_connected_dot_fff.png" />	 
+			<a href="<?php bloginfo('siteurl'); ?>">
+				<img style="margin-bottom:-7px" id="banner-connected" src="<?php bloginfo('template_directory'); ?>/img/logo_connected_dot_fff.png" />	 
+			</a>
 			<span id="dot-something">
 				<!-- js will add -->
 			</span>

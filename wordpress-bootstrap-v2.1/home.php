@@ -16,156 +16,38 @@
 				  <li><a href="">Hi</a></li>
 				</ul>-->
 				
-
-		    <?php
-		    $tmp_post = $post;
-		    $query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'intro' );
-		    $pages = get_posts( $query_args );
-		    if ( ! empty( $pages ) ) :
-		    	setup_postdata( $pages[0] );
-		    ?>				
-		    <h2 class="node">hello
-		    <?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
-		    </h2>
-
-		    
-		    <?php the_content(); ?>
-		
-			<?php 
-			endif; 
-			$post = $tmp_post;
-			?>	
-	
-	<hr />
-	
-	<h2 class="node"><a href="http://blog.connected.io/tagged/inspiration">#inspiration</a></h2>
-				<div class="well" id="carousel-container">
-				<div id="myCarousel" class="carousel slide">
-		  <!-- Carousel items -->
-		  <div class="carousel-inner">
-
-		  <?php
-				$tmp_post = $post;
-				$query_args = array( 'suppress_filters' => false, 'post_type' => 'quote', 'showposts' => '1000' );
-				$slides = get_posts( $query_args );
-				if ( ! empty( $slides ) ) {
-	  			$counter = 0;
-	  			foreach( $slides as $post ) { setup_postdata( $post ); $counter++;
-	  		?>	
-
-			<div class="item<?php if ($counter == 1) echo ' active'; ?>">
-			  <blockquote>"<?php the_content_rss(); ?>"</blockquote>
-			  <cite>&mdash; <?php the_excerpt_rss(); ?></cite>
-			</div>
-
-			<?php } } 
-			$post = $tmp_post;
-			?>
-
-		  </div>
-		  <!-- Carousel nav -->
-		  <!--
-		  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-		-->
-		</div>
-		
-	</div>
-
-	<hr />
-		<?php
-		$tmp_post = $post;
-		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'network' );
-		$pages = get_posts( $query_args );
-		if ( ! empty( $pages ) ) :
-			setup_postdata( $pages[0] );
-		?>
-
-		<h2 class="node">the network
-		<?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
-		</h2>
-		
-		<?php the_content(); ?>
-	
-		<?php 
-		endif; 
-		$post = $tmp_post;
-		?>	
-
-	<hr />
-	
 			<?php
-		$tmp_post = $post;
-		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'awesome' );
-		$pages = get_posts( $query_args );
-		if ( ! empty( $pages ) ) :
-			setup_postdata( $pages[0] );
-		?>
-	
-		<h2 class="node">/awesome
-			<?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
-		</h2>
-		
-		<?php the_content(); ?>
-	
-		<?php 
-		endif; 
-		$post = $tmp_post;
-		?>	
-
-
-	<hr />
-	
-		<?php
-		$tmp_post = $post;
-		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'hacking-society' );
-		$pages = get_posts( $query_args );
-		if ( ! empty( $pages ) ) :
-			setup_postdata( $pages[0] );
-		?>
-		<h2 class="node">#hacksociety
-		<?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
-		</h2>
-		
-		<?php the_content(); ?>
-	
-		<?php 
-		endif; 
-		$post = $tmp_post;
-		?>	
-
-
-	<hr />
-
-	
-		<?php
-		$tmp_post = $post;
-		$query_args = array( 'suppress_filters' => false, 'post_type' => 'page', 'name' => 'team' );
-		$pages = get_posts( $query_args );
-		if ( ! empty( $pages ) ) :
-			setup_postdata( $pages[0] );
-		?>
-	
-		<h2 class="node">who we are
-		<?php edit_post_link('edit','<br /><small>','</small>', $post->ID); ?>
-		</h2>
-		
-		<?php the_content(); ?>
-	
-		<?php 
-		endif; 
-		$post = $tmp_post;
-		?>	
-	
-	
-	<!--<p class="label label-warning" style="clear:both">Highlights from <a style="color: #fff; text-decoration:underline" href="http://blog.connected.io">the blog</a></p>-->
-	
-	<hr style="clear:both"/>
+			query_posts('post_type=page&meta_key=homepage-feature&meta_value=true');
+			if (have_posts()) :
+				while(have_posts()):
+					the_post();
+			?>
+			
+			<h2 class="node">
+				<?php io_the_title(); ?><br />
+				<small><?php edit_post_link('edit'); ?></small>	
+			</h2>
+			
+			<?php the_content(); ?>
+			<?php //print_r($post); ?>
+			
+			<?php if($post->post_name == 'inspiration') :
+					io_show_quotes();
+				  endif; ?>
+			
+			<hr style="clear:both"/>
+			<?php
+				endwhile;
+			endif;
+			?>
 	
 	<h2 class="node"><a href="http://blog.connected.io">blog</a></h2>
 	
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php 
+						wp_reset_query();
+						if (have_posts()) : while (have_posts()) : the_post(); 
+					?>
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						
@@ -183,6 +65,7 @@
 							<?php the_excerpt( __("Read more &raquo;","bonestheme") ); ?>
 						</section> <!-- end article section -->
 						
+						<?php edit_post_link('edit'); ?>
 						<?php /*
 						<footer>
 			
@@ -218,6 +101,7 @@
 				  <input type="text" class="input-large" placeholder="Your email" id="mce-EMAIL" name="EMAIL">
 				  <button type="submit" name="subscribe" class="btn btn-info" id="mc-embedded-subscribe">Get an occasional email</button>
 				</form>
+
 	
 	</div> <!-- end #main -->
     

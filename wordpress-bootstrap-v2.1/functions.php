@@ -96,6 +96,56 @@ function codex_custom_init() {
   
 }
 
+function io_show_quotes() {
+	?>
+	<div class="well" id="carousel-container">
+		<div id="myCarousel" class="carousel slide">
+		  <!-- Carousel items -->
+		  <div class="carousel-inner">
+	
+		  <?php
+				$tmp_post = $post;
+				$query_args = array( 'suppress_filters' => false, 'post_type' => 'quote', 'showposts' => '1000' );
+				$slides = get_posts( $query_args );
+				if ( ! empty( $slides ) ) {
+	  			$counter = 0;
+	  			foreach( $slides as $post ) { setup_postdata( $post ); $counter++;
+	  		?>	
+	
+			<div class="item<?php if ($counter == 1) echo ' active'; ?>">
+			  <blockquote>"<?php the_content_rss(); ?>"</blockquote>
+			  <cite>&mdash; <?php echo $post->post_excerpt; ?></cite>
+			</div>
+	
+			<?php } } 
+			$post = $tmp_post;
+			?>
+	
+		 </div>
+		  <!-- Carousel nav -->
+		  <!--
+		  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		-->
+	  </div>
+		
+	</div>
+	<?php
+}
+
+function io_the_title() {
+	global $post;
+	$a;
+	$slash_a;
+	
+	$url = get_post_meta($post->ID,'io-page-links-to',true);
+	if ($url != '') {
+		$a = '<a href="'.$url.'">';
+		$slash_a = '</a>';
+	}
+	echo $a . $post->post_title . $slash_a;
+}
+
 
 /************* ACTIVE SIDEBARS ********************/
 
