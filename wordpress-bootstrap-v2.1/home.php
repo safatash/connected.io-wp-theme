@@ -68,6 +68,7 @@
 							<?php the_excerpt( __("Read more &raquo;","bonestheme") ); ?>
 						</section> <!-- end article section -->
 						
+						<?php edit_post_link('edit'); ?>
 						<?php /*
 						<footer>
 			
