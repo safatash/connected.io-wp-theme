@@ -51,7 +51,7 @@
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						
-						<header>
+						<header class="blog-post">
 						
 							<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'wpbs-featured' ); ?></a>
 							
@@ -69,11 +69,7 @@
 					<?php endwhile; ?>		
 					
 					<?php endif; ?>
-			
-					
-	
-	<hr />
-	
+				
 	<?php // Get RSS Feed(s)
 	include_once(ABSPATH . WPINC . '/feed.php');
 	
