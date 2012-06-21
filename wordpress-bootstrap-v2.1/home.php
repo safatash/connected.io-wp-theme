@@ -98,6 +98,8 @@
 		</li>
 		<?php endforeach; ?>
 	</ul>
+	
+	<!--
 	<br />
 					
     <h2 class="node">connect</h2>
@@ -106,7 +108,7 @@
 				  <input type="text" class="input-large" placeholder="Your email" id="mce-EMAIL" name="EMAIL">
 				  <button type="submit" name="subscribe" class="btn btn-info" id="mc-embedded-subscribe">Get an occasional email</button>
 				</form>
-
+	-->
 	
 	</div> <!-- end #main -->
     
