@@ -57,45 +57,52 @@
 							
 							<div class="page-header"><h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3></div>
 							
-							<p class="meta"><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time><!-- <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>--> </p>
+							<p class="meta"><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> <?php edit_post_link('edit'); ?><!-- <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>--> </p>
 						
 						</header> <!-- end article header -->
-					
-					  <?php /*
-						<section class="post_content clearfix">
-							<?php the_excerpt( __("Read more &raquo;","bonestheme") ); ?>
-						</section> <!-- end article section -->
-						*/?>
 						
-						<?php edit_post_link('edit'); ?>
-						<?php /*
-						<footer>
-			
-							<p class="tags"><?php the_tags('<span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ' ', ''); ?></p>
-							
-						</footer> <!-- end article footer -->
-						*/ ?>
+						<php the_excerpt(); ?>
+						
 						
 					</article> <!-- end article -->
 					
-					<?php //comments_template(); ?>
-					
-					<?php endwhile; ?>	
-					
-					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
-						
-						<?php page_navi(); // use the page navi function ?>
-						
-					<?php } else { // if it is disabled, display regular wp prev & next links ?>
-						<nav class="wp-prev-next">
-							<ul class="clearfix">
-								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
-								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
-							</ul>
-						</nav>
-					<?php } ?>		
+					<?php endwhile; ?>		
 					
 					<?php endif; ?>
+			
+					
+	
+	<hr />
+	
+	<?php // Get RSS Feed(s)
+	include_once(ABSPATH . WPINC . '/feed.php');
+	
+	// Get a SimplePie feed object from the specified feed source.
+	$rss = fetch_feed('http://blog.connected.io/rss');
+	if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly 
+		// Figure out how many total items there are, but limit it to 5. 
+		$maxitems = $rss->get_item_quantity(5); 
+	
+		// Build an array of all the items, starting with element 0 (first element).
+		$rss_items = $rss->get_items(0, $maxitems); 
+	endif;
+	?>
+	
+	<ul>
+		<?php if ($maxitems == 0) echo '<li>No items.</li>';
+		else
+		// Loop through each feed item and display each item as a hyperlink.
+		foreach ( $rss_items as $item ) : ?>
+		<li>
+			<b><a href='<?php echo esc_url( $item->get_permalink() ); ?>'
+			title='<?php echo 'Posted '.$item->get_date('j F Y | g:i a'); ?>'>
+			<?php echo esc_html( $item->get_title() ); ?></a></b>
+			
+			<p class="meta"><?php echo $item->get_date('F j, Y'); ?></p>
+		</li>
+		<?php endforeach; ?>
+	</ul>
+	<br />
 					
     <h2 class="node">connect</h2>
     
