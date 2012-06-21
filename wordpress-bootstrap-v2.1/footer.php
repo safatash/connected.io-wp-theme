@@ -87,10 +87,7 @@
   	'government',
   	'neighborhoods',
   	'cities',
-  	'innovation',
-  	'innovation',
-  	'innovation',
-  	'IO'
+  	'innovation'
   ];
   
   
@@ -106,11 +103,10 @@
 	
 	$('#dot-something').removeClass('innovation');
 	
-	if (words[counter] == 'IO') {
+	if (words[counter] == 'innovation') {
 		$('#dot-something')
 			.hide()
-			.addClass('io')
-			.text('IO')
+			.text('innovation')
 			.fadeIn(500,'linear')
 		;
 		counter++;
