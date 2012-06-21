@@ -57,13 +57,15 @@
 							
 							<div class="page-header"><h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3></div>
 							
-							<p class="meta"><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> </p>
+							<p class="meta"><time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time><!-- <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>--> </p>
 						
 						</header> <!-- end article header -->
 					
+					  <?php /*
 						<section class="post_content clearfix">
 							<?php the_excerpt( __("Read more &raquo;","bonestheme") ); ?>
 						</section> <!-- end article section -->
+						*/?>
 						
 						<?php edit_post_link('edit'); ?>
 						<?php /*
@@ -76,7 +78,7 @@
 						
 					</article> <!-- end article -->
 					
-					<?php comments_template(); ?>
+					<?php //comments_template(); ?>
 					
 					<?php endwhile; ?>	
 					

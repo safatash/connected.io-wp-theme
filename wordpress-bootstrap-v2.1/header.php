@@ -1,5 +1,5 @@
 <?php if (!current_user_can('read')) {
-	header('Location: ./hello.html');
+	//header('Location: ./hello.html');
 }
 ?>
 <!doctype html>  

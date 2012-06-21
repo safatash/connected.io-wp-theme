@@ -85,9 +85,9 @@
   	'arts',
   	'transportation',
   	'government',
-  	'crisis response',
   	'neighborhoods',
   	'cities',
+  	'innovation',
   	'innovation',
   	'innovation',
   	'IO'
@@ -117,14 +117,14 @@
 		return;
 	}
 	
-	if (counter == words.length - 1) {
+	/*if (counter == words.length - 1) {
 		alert('hi')
 		$('#dot-something')
 			.fadeOut(500)
 		;
 		counter++;
 		return;
-	}
+	}*/
 	
 	/* default */
   	$('#dot-something')
