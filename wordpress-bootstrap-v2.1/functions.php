@@ -146,6 +146,14 @@ function io_the_title() {
 	echo $a . $post->post_title . $slash_a;
 }
 
+function return_3600( $seconds )
+{
+  // change the default feed cache recreation period to 2 hours
+  return 3600;
+}
+
+add_filter( 'wp_feed_cache_transient_lifetime' , 'return_3600' );
+
 
 /************* ACTIVE SIDEBARS ********************/
 
