@@ -103,10 +103,10 @@
 	
 	$('#dot-something').removeClass('innovation');
 	
-	if (words[counter] == 'innovation') {
+	if (counter == words.length-1) {
 		$('#dot-something')
 			.hide()
-			.text('innovation')
+			.text(words[counter])
 			.fadeIn(500,'linear')
 		;
 		counter++;
