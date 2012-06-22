@@ -134,11 +134,16 @@ body.home .brand {
   border-radius: 0;
   position: fixed;
   width: 100%;
-  border-bottom: 10px solid #fff;
+  /*border-bottom: 10px solid #fff;*/
+
   z-index: 1000;
 }
 header .navbar {
   margin-bottom: 0 !important;
+}
+#logo {
+  margin-left: 170px;
+  position: relative;
 }
 header .navbar a.brand {
   background: url(../img/logo_connected_dot_white_wide.png) left 20px no-repeat;
@@ -152,7 +157,7 @@ header .navbar a.brand {
 }
 span#dot-something {
   font-family: "Calvert";
-  font-size: 36px;
+  font-size: 28px;
   margin-bottom: 10px !important;
   letter-spacing: -2px;
   color: #666;
@@ -324,9 +329,9 @@ body.home .subnav {
 
   border: none !important;
   border-left: 3px solid #eee !important;
-  -webkit-border-radius: 15px 15px 15px 15px;
-  -moz-border-radius: 15px 15px 15px 15px;
-  border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 0 0 15px 15px;
+  -moz-border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
@@ -362,7 +367,7 @@ header.blog-post {
 /* Main Content
 ---------------------*/
 #content {
-  padding-top: 100px !important;
+  padding-top: 57px !important;
 }
 body.home #content {
   /*padding-top: 20px !important;*/
