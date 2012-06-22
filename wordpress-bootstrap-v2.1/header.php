@@ -19,7 +19,7 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		
 		<!-- icons & favicons -->
-		<!-- For iPhone 4 -->
+		<!-- For iPhone 4 --> 
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/h/apple-touch-icon.png">
 		<!-- For iPad 1-->
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/m/apple-touch-icon.png">
@@ -36,6 +36,8 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
+
+               <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://blog.connected.io/rss" />
 		
 		<!--<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">-->
 		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css" rel="stylesheet">
