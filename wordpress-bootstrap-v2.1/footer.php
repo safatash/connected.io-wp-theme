@@ -85,7 +85,6 @@
   	'arts',
   	'transportation',
   	'government',
-  	'neighborhoods',
   	'cities',
   	'innovation'
   ];
