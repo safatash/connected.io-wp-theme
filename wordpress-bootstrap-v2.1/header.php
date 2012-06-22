@@ -123,7 +123,7 @@
 	    <div class="container">
 		    <div id="logo">
 			<a href="<?php bloginfo('siteurl'); ?>">
-				<img style="margin-bottom:-9px" id="banner-connected" src="<?php bloginfo('template_directory'); ?>/img/logo_connected_butterfly_white_wide.png" />	 
+				<img style="margin-bottom:-9px" id="banner-connected" src="<?php bloginfo('template_directory'); ?>/img/logo_connected_butterfly_white_wide.png" height="51"/>	 
 			</a>
 			<span id="dot-something">
 				<!-- js will add -->
