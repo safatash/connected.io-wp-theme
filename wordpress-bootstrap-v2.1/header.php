@@ -121,7 +121,7 @@
     
     <header role="banner" id="header" class="navbar-inner" style="padding: 10px 0 0 25px;">
 	    <div class="container">
-		    <div style="position:relative">
+		    <div id="logo">
 			<a href="<?php bloginfo('siteurl'); ?>">
 				<img style="margin-bottom:-9px" id="banner-connected" src="<?php bloginfo('template_directory'); ?>/img/logo_connected_butterfly_white_wide.png" />	 
 			</a>
