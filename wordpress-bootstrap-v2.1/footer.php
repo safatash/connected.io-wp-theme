@@ -82,7 +82,7 @@
   	'health',
   	'learning',
   	'energy',
-  	'arts',
+  	'creativity',
   	'transportation',
   	'cities',
   	'innovation',
