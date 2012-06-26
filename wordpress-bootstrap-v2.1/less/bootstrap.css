@@ -160,10 +160,10 @@ span#dot-something {
   font-size: 65px;
   margin-bottom: 10px !important;
   letter-spacing: -6px;
-  color: #ccc;
+  color: #bcbcbc;
   position: absolute;
-  top: 20px;
-  left: 383px;
+  top: 31px;
+  left: 384px;
 }
 span#dot-something.innovation {
   color: #fdbb63;
