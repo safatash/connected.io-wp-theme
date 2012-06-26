@@ -84,9 +84,11 @@
   	'energy',
   	'arts',
   	'transportation',
-  	'government',
   	'cities',
-  	'innovation'
+  	'innovation',
+  	'innovation',
+  	'innovation',
+  	'io'	
   ];
   
   
@@ -103,6 +105,7 @@
 	$('#dot-something').removeClass('innovation');
 	
 	if (counter == words.length-1) {
+		$('#dot-something').clone().appendTo($('#dot-something').parent()).fadeOut(500, 'linear')
 		$('#dot-something')
 			.hide()
 			.text(words[counter])

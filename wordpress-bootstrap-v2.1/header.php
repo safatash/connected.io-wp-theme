@@ -119,11 +119,11 @@
     </div>
     */ ?>
     
-    <header role="banner" id="header" class="navbar-inner" style="padding: 10px 0 0 25px;">
+    <header role="banner" id="" class="" style="padding: 25px 0; margin: 0">
 	    <div class="container">
 		    <div id="logo">
 			<a href="<?php bloginfo('siteurl'); ?>">
-				<img style="margin-bottom:-9px" id="banner-connected" src="<?php bloginfo('template_directory'); ?>/img/logo_connected_butterfly_white_wide.png" height="51"/>	 
+				<img id="banner-connected" src="<?php bloginfo('template_directory'); ?>/img/logo_connected_dot_butterfly_black_wide.png"/>	 
 			</a>
 			<span id="dot-something">
 				<!-- js will add -->
