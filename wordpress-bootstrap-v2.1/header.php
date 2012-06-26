@@ -40,7 +40,7 @@
                <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://blog.connected.io/rss" />
 		
 		<!--<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">-->
-		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css" rel="stylesheet">
+		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css?v=3" rel="stylesheet">
 		<!--<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.min.css" rel="stylesheet/less">-->
 
 		
