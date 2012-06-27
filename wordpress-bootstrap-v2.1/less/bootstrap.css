@@ -142,7 +142,7 @@ header .navbar {
   margin-bottom: 0 !important;
 }
 #logo {
-  margin-left: 0;
+  margin-left: 155px;
   position: relative;
 }
 header .navbar a.brand {
@@ -162,8 +162,8 @@ span#dot-something {
   letter-spacing: -6px;
   color: #ccc;
   position: absolute;
-  top: 31px;
-  left: 384px;
+  top: 34px;
+  left: 359px;
 }
 span#dot-something.innovation {
   color: #fdbb63;

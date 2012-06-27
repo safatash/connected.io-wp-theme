@@ -79,17 +79,17 @@
 
 
   var words = [
-  	'health',
-  	'learning',
-  	'arts',
-  	'commerce',
-  	'energy',
-  	'transportation',
-  	'cities',
-  	'innovation',
-  	'innovation',
-  	'innovation',
-  	'io'	
+  	'.health',
+  	'.learning',
+  	'.arts',
+  	'.commerce',
+  	'.energy',
+  	'.transportation',
+  	'.cities',
+  	'.innovation',
+  	'.innovation',
+  	'.innovation',
+  	'.io'
   ];
   
   
