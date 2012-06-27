@@ -82,6 +82,7 @@
   	'health',
   	'learning',
   	'arts',
+  	'commerce',
   	'energy',
   	'transportation',
   	'cities',
