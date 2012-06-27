@@ -81,8 +81,8 @@
   var words = [
   	'health',
   	'learning',
+  	'arts',
   	'energy',
-  	'creativity',
   	'transportation',
   	'cities',
   	'innovation',
