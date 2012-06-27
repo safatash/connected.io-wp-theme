@@ -119,7 +119,7 @@
     </div>
     */ ?>
     
-    <header role="banner" id="" class="" style="padding: 25px 0; margin: 0">
+    <header role="banner" id="" class="" style="padding: 20px 0; margin: 0">
 	    <div class="container">
 		    <div id="logo">
 			<a href="<?php bloginfo('siteurl'); ?>">
