@@ -160,7 +160,7 @@ span#dot-something {
   font-size: 65px;
   margin-bottom: 10px !important;
   letter-spacing: -6px;
-  color: #bcbcbc;
+  color: #ccc;
   position: absolute;
   top: 31px;
   left: 384px;
@@ -339,7 +339,7 @@ body.home .subnav {
   margin-left: -198px;
   padding-left: 20px;
   float: left;
-  color: #666;
+  color: #222;
   width: 150px;
 }
 #main h2.node small a {
@@ -425,7 +425,7 @@ body.home #content {
   font: 22px georgia;
   line-height: 1.4em;
   font-style: italic;
-  color: #999999;
+  color: #555555;
   border-left: none;
 }
 .carousel cite {
