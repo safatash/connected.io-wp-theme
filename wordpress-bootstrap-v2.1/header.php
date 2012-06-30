@@ -40,7 +40,7 @@
                <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://blog.connected.io/rss" />
 		
 		<!--<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">-->
-		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css?v=4" rel="stylesheet">
+		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css?v=5" rel="stylesheet">
 		<!--<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.min.css" rel="stylesheet/less">-->
 
 		
@@ -59,7 +59,7 @@
 	
 	<body <?php body_class(); ?>>			
 	
-	<?php /*	
+
 		<header role="banner" id="header">
 		
 			<div id="inner-header" class="clearfix">
@@ -70,7 +70,7 @@
 							<nav role="navigation">
 								<a class="brand" id="logo" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
 								<span id="dot-something">
-									<img src="<?php bloginfo('template_directory'); ?>/img/dot-innovation-gray.png" />
+									
 								</span>
 								<p class="tagline"><?php bloginfo('description'); ?></p>
 								
@@ -106,7 +106,6 @@
 
 		</header> <!-- end header -->
 		
-		*/ ?>
 		
 		<?php /*
 		<div class="container">
@@ -119,6 +118,8 @@
     </div>
     */ ?>
     
+    
+    <?php /*
     <header role="banner" id="" class="" style="padding: 20px 0; margin: 0">
 	    <div class="container">
 		    <div id="logo">
@@ -133,5 +134,6 @@
 		</div>
 	
 	</header>
+	*/ ?>
     
 		<div class="container">

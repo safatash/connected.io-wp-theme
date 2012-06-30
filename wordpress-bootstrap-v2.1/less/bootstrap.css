@@ -142,11 +142,11 @@ header .navbar {
   margin-bottom: 0 !important;
 }
 #logo {
-  margin-left: 160px;
+  margin-left: 0px;
   position: relative;
 }
 header .navbar a.brand {
-  background: url(../img/logo_connected_dot_white_wide.png) left 20px no-repeat;
+  background: url(../img/logo_connected_dot_butterfly_white_wide.png) left 12px no-repeat;
   height: 64px;
   display: block;
   width: 5  50px;
@@ -160,18 +160,10 @@ span#dot-something {
   font-size: 65px;
   margin-bottom: 10px !important;
   letter-spacing: -6px;
-  color: #ccc;
+  color: #454545;
   position: absolute;
-  top: 20px;
-  left: 346px;
-}
-span#dot-something.innovation {
-  color: #fdbb63;
-}
-span#dot-something.io {
-  font-family: 'Calvert';
-  font-size: 50px;
-  color: #656565;
+  top: 32px;
+  left: 640px;
 }
 .navbar-inner {
   webkit-box-shadow: none !important;
@@ -365,7 +357,7 @@ header.blog-post {
 /* Main Content
 ---------------------*/
 #content {
-  padding-top: 0px !important;
+  padding-top: 120px !important;
 }
 body.home #content {
   /*padding-top: 20px !important;*/
