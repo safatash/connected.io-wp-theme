@@ -3,7 +3,7 @@
 			<div id="content" class="clearfix row-fluid">
 				
 				<div class="span3">
-					<div class="well" id="timeline" style="border-right:none">
+					<div class="well" id="timeline">
 						&nbsp;
 					</div><!-- /.well -->
 				</div><!-- /.span2 -->
