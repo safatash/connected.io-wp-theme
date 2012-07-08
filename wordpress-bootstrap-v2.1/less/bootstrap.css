@@ -146,8 +146,8 @@ header .navbar {
   position: relative;
 }
 header .navbar a.brand {
-  background: url(../img/logo_connected_dot_butterfly_white_wide.png) left 20px no-repeat;
-  height: 64px;
+  background: url(../img/connected.io-balsamiq.png) left 13px no-repeat;
+  height: 44px;
   display: block;
   width: 5  50px;
   text-indent: -9999px;
@@ -157,13 +157,13 @@ header .navbar a.brand {
 }
 span#dot-something {
   font-family: "Calvert";
-  font-size: 40px;
+  font-size: 38px;
   margin-bottom: 10px !important;
   letter-spacing: -2px;
-  color: #CCC;
+  color: #565656;
   position: absolute;
-  top: 125px;
-  left: 480px;
+  top: 22px;
+  left: 505px;
 }
 span#dot-something.innovation {
   color: #fdbb63;
@@ -325,21 +325,23 @@ body.home .subnav {
   background-position: top left;
   */
 
-  border: 10px solid #eee !important;
-  -webkit-border-radius: 15px 15px 15px 15px;
-  -moz-border-radius: 15px 15px 15px 15px;
-  border-radius: 15px 15px 15px 15px;
+  border: none;
+  border-left: 10px solid #eee !important;
+  margin-bottom: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
 }
 #main h2.node {
   background: url('../img/half-node.png') -2px 0px no-repeat;
-  margin-left: -198px;
+  margin-left: -264px;
   padding-left: 20px;
   float: left;
   color: #222;
-  width: 150px;
+  width: 200px;
 }
 #main h2.node small a {
   font-size: 70%;
@@ -364,7 +366,7 @@ header.blog-post {
 /* Main Content
 ---------------------*/
 #content {
-  padding-top: 0px !important;
+  margin-top: 55px;
 }
 body.home #content {
   /*padding-top: 20px !important;*/

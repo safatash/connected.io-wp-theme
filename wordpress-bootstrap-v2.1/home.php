@@ -2,7 +2,7 @@
 
 			<div id="content" class="clearfix row-fluid">
 				
-				<div class="span3">
+				<div class="span4">
 					<div class="well" id="timeline">
 						&nbsp;
 					</div><!-- /.well -->

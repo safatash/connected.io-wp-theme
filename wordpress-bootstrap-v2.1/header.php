@@ -40,7 +40,7 @@
                <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://blog.connected.io/rss" />
 		
 		<!--<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">-->
-		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css?v=5" rel="stylesheet">
+		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css?v=6" rel="stylesheet">
 		<!--<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.min.css" rel="stylesheet/less">-->
 
 		
@@ -59,7 +59,6 @@
 	
 	<body <?php body_class(); ?>>			
 	
-	<?php /*	
 		<header role="banner" id="header">
 		
 			<div id="inner-header" class="clearfix">
@@ -70,7 +69,7 @@
 							<nav role="navigation">
 								<a class="brand" id="logo" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
 								<span id="dot-something">
-									<img src="<?php bloginfo('template_directory'); ?>/img/dot-innovation-gray.png" />
+									
 								</span>
 								<p class="tagline"><?php bloginfo('description'); ?></p>
 								
@@ -81,7 +80,7 @@
 								</a>
 								
 								<div class="nav-collapse">
-									<?php //bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 								</div>
 							
 							<?php if(of_get_option('search_bar', '1')) {?>
@@ -89,6 +88,7 @@
 								<input name="s" id="s" type="text" class="search-query" placeholder="<?php _e('Search','bonestheme'); ?>">
 							</form>
 							<?php } ?>
+						
 							
 						</div>
 					</div>
@@ -106,8 +106,6 @@
 
 		</header> <!-- end header -->
 		
-		*/ ?>
-		
 		<?php /*
 		<div class="container">
 			 <div class="subnav" style="margin-left:0">
@@ -117,7 +115,7 @@
          
         </div>
     </div>
-    */ ?>
+   
     
     <header role="banner" id="" class="" style="padding: 20px 0 30px; margin: 0">
 	    <div class="container">
@@ -133,5 +131,6 @@
 		</div>
 	
 	</header>
+	*/ ?>
     
 		<div class="container">
