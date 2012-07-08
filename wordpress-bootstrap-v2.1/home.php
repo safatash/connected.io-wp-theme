@@ -45,6 +45,7 @@
 	
 
 					<?php 
+					/*
 						wp_reset_query();
 						if (have_posts()) : while (have_posts()) : the_post(); 
 					?>
@@ -68,7 +69,9 @@
 					
 					<?php endwhile; ?>		
 					
-					<?php endif; ?>
+					<?php endif; 
+					*/
+					?>
 				
 	<?php // Get RSS Feed(s)
 	include_once(ABSPATH . WPINC . '/feed.php');
