@@ -93,9 +93,9 @@
 		// Loop through each feed item and display each item as a hyperlink.
 		foreach ( $rss_items as $item ) : ?>
 		<li>
-			<b><a href='<?php echo esc_url( $item->get_permalink() ); ?>'
+			<a href='<?php echo esc_url( $item->get_permalink() ); ?>'
 			title='<?php echo 'Posted '.$item->get_date('j F Y | g:i a'); ?>'>
-			<?php echo esc_html( $item->get_title() ); ?></a></b>
+			<?php echo esc_html( $item->get_title() ); ?></a>
 			
 			<p class="meta"><?php echo $item->get_date('F j, Y'); ?></p>
 		</li>
