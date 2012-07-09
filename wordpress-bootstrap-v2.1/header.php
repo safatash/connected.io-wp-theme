@@ -67,7 +67,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </a>
-		  <a class="brand" id"logo" href="#"></a>
+		  <a class="brand" id="logo" href="<?php bloginfo('siteurl'); ?>"></a>
 		  <span id="dot-something"></span>
 		  <div class="nav-collapse">
 			<ul class="nav pull-right">
@@ -77,33 +77,5 @@
 		</div>
 	  </div>
 	</div>
-	
-			
-		<?php /*
-		<div class="container">
-			 <div class="subnav" style="margin-left:0">
-          <?php wp_nav_menu(array('container' => 'false', 'menu_class' => 'nav nav-pills pull-left', 'menu' => 'Main Nav')); ?>   
-          
-          <?php wp_nav_menu(array('container' => 'false', 'menu_class' => 'nav nav-pills pull-right', 'menu' => 'Secondary Nav')); ?> 
-         
-        </div>
-    </div>
-   
-    
-    <header role="banner" id="" class="" style="padding: 20px 0 30px; margin: 0">
-	    <div class="container">
-		    <div id="logo">
-			<a href="<?php bloginfo('siteurl'); ?>">
-				<img id="banner-connected" src="<?php bloginfo('template_directory'); ?>/img/logo_square.png?v=c" style=""/>	 
-			</a>
-			<span id="dot-something">
-				<!-- js will add -->
-			</span>
-		</div>
-			   
-		</div>
-	
-	</header>
-	*/ ?>
     
 		<div class="container">

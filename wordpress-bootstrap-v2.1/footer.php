@@ -75,6 +75,7 @@
       interval: 8000
     });
     $('#timeline').height($('#main').height());
+    $('#sidebar1').height($('#main').height());
   })
 
 
@@ -140,9 +141,10 @@
   <?php if (is_home()) : ?>
   var intervalId = setInterval(nextWord,500);
   <?php else: ?>
-  $('#dot-something').text('IO').addClass('io');
+  $('#dot-something').text('.io');
   <?php endif; ?>
   </script>
+  
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 
 	</body>
