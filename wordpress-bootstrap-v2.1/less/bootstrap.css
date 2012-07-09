@@ -162,15 +162,7 @@ span#dot-something {
   color: #565656;
   position: absolute;
   top: 22px;
-  left: 505px;
-}
-span#dot-something.innovation {
-  color: #fdbb63;
-}
-span#dot-something.io {
-  font-family: 'Calvert';
-  font-size: 50px;
-  color: #656565;
+  left: 211px;
 }
 .navbar-inner {
   webkit-box-shadow: none !important;
@@ -193,7 +185,7 @@ p.tagline {
 
 }
 .navbar .nav > li > a {
-  padding: 24px 10px 20px !important;
+  padding: 24px 10px !important;
 }
 header .navbar-inner {
   -webkit-border-radius: 0px;
