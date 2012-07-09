@@ -28,7 +28,7 @@
 		<!-- For Nokia -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/library/images/icons/l/apple-touch-icon.png">
 		<!-- For everything else -->
-		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png?v=2">
+		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png?v=3">
 
 		
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -40,7 +40,7 @@
                <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://blog.connected.io/rss" />
 		
 		<!--<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">-->
-		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css?v=6" rel="stylesheet">
+		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css?v=7" rel="stylesheet">
 		<!--<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.min.css" rel="stylesheet/less">-->
 
 		
