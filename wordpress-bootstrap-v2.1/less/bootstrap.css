@@ -193,7 +193,7 @@ p.tagline {
 
 }
 .navbar .nav > li > a {
-  padding: 22px 10px !important;
+  padding: 24px 10px 20px !important;
 }
 header .navbar-inner {
   -webkit-border-radius: 0px;
