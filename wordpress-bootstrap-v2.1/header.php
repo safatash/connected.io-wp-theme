@@ -59,53 +59,26 @@
 	
 	<body <?php body_class(); ?>>			
 	
-		<header role="banner" id="header">
-		
-			<div id="inner-header" class="clearfix">
-				
-				<div class="navbar navbar-top">
-					<div class="navbar-inner">
-						<div class="container nav-container">
-							<nav role="navigation">
-								<a class="brand" id="logo" title="<?php echo get_bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-								<span id="dot-something">
-									
-								</span>
-								<p class="tagline"><?php bloginfo('description'); ?></p>
-								
-								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-							        <span class="icon-bar"></span>
-							        <span class="icon-bar"></span>
-							        <span class="icon-bar"></span>
-								</a>
-								
-								<div class="nav-collapse">
-									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-								</div>
-							
-							<?php if(of_get_option('search_bar', '1')) {?>
-							<form class="navbar-search pull-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-								<input name="s" id="s" type="text" class="search-query" placeholder="<?php _e('Search','bonestheme'); ?>">
-							</form>
-							<?php } ?>
-						
-							
-						</div>
-					</div>
-				</div>
-				
-				
+	<div class="navbar navbar-fixed-top" id="header">
+	  <div class="navbar-inner">
+		<div class="container">
+		  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </a>
+		  <a class="brand" id"logo" href="#"></a>
+		  <span id="dot-something"></span>
+		  <div class="nav-collapse">
+			<ul class="nav pull-right">
+			  <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+			</ul>
+		  </div><!--/.nav-collapse -->
+		</div>
+	  </div>
+	</div>
+	
 			
-			</div> <!-- end #inner-header -->
-			
-			
-		
-										</nav>
-										
-										
-
-		</header> <!-- end header -->
-		
 		<?php /*
 		<div class="container">
 			 <div class="subnav" style="margin-left:0">

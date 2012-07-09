@@ -145,14 +145,13 @@ header .navbar {
   text-align: center;
   position: relative;
 }
-header .navbar a.brand {
+#header a.brand {
   background: url(../img/connected.io-balsamiq.png) left 13px no-repeat;
   height: 44px;
   display: block;
-  width: 5  50px;
+  width: 350px;
   text-indent: -9999px;
   margin: 0 auto;
-  float: none !important;
   margin-left: auto;
 }
 span#dot-something {
@@ -186,10 +185,15 @@ p.tagline {
   display: none;
 }
 .nav-collapse {
-  display: none;
+  /*display: none;*/
+
 }
 .navbar .nav {
-  padding-top: 9px;
+  /*padding-top: 9px;*/
+
+}
+.navbar .nav > li > a {
+  padding: 22px 10px !important;
 }
 header .navbar-inner {
   -webkit-border-radius: 0px;
