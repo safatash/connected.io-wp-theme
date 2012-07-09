@@ -519,6 +519,17 @@ footer .contact {
 footer label {
   color: #555;
 }
+footer .widget {
+  width: 100% !important;
+}
+footer .textwidget p {
+  font-size: 70%;
+  color: #bbb;
+}
+footer .textwidget p a {
+  color: #bbb;
+  text-decoration: underline;
+}
 footer hr {
   border: none;
   border-bottom: 1px solid #ccc;
