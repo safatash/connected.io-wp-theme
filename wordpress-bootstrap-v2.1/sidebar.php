@@ -2,7 +2,7 @@
 		<div class="well">
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<h2>/<?php the_title(); ?> <?php edit_post_link('edit','<small>','</small>'); ?></h2>
+			<h2 class="page-title">/<?php the_title(); ?> <?php edit_post_link('edit','<small>','</small>'); ?></h2>
 			<hr style="margin: 0 0 12px" />
 			<?php endwhile; endif; ?>
 	
