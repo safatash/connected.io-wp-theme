@@ -11,11 +11,14 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
+						
+						<?php if ($post->post_type == "incsub_wiki") : ?>	
 							
-						<!--<div class="page-header"><h1 class="page-title" itemprop="headline">
+						<div class="page-header">
+							<h1 class="page-title" itemprop="headline">
 							<?php the_title(); ?>
 							</h1></div>
-						-->
+						<?php endif; ?>
 						</header> <!-- end article header -->
 					
 						<section class="post_content clearfix" itemprop="articleBody">
