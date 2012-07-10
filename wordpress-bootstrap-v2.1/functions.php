@@ -73,9 +73,16 @@ function cio_display_feed($feed_url, $count = 100, $query_text, $source_name, $s
 		endif;
 		?> 
 
-		<h3>From <?php echo $source_name; ?></h3>
+		<h3><?php echo $source_name; ?></h3>
 
-		<p>searching "<a href="<?php echo $source_url; ?>"><?php echo $query_text; ?></a>"</p>
+    <?php if ($source_name == "Sticky") :  ?>
+				<p><em>Tag links 'connectedio' and '<?php echo $query_text ?>' on Delicious to make them stick.</em></p>
+    <?php else: ?>
+
+		<p><em>searching "<a href="<?php echo $source_url; ?>"><?php echo $query_text; ?></a>"</em></p>
+		
+		<?php endif; ?>
+
 
 		<ul class="newsfeed">
 			<?php if ($maxitems == 0) echo '<li>No items.</li>';
@@ -101,7 +108,7 @@ function cio_display_feed($feed_url, $count = 100, $query_text, $source_name, $s
 			}
 
 			?>
-			<li>
+			<li style="margin-bottom: 1em;">
 				<a class="newsitem" href='<?php echo $clean_url;  ?>'
 				title='<?php echo 'Posted '.$item->get_date('j F Y | g:i a'); ?>'>
 				<?php echo esc_html( $item->get_title() ); ?></a>
@@ -109,7 +116,7 @@ function cio_display_feed($feed_url, $count = 100, $query_text, $source_name, $s
 				<span class="meta">
 				  <?php echo $source; ?><br />
 				<?php echo $item->get_date('F j Y | g:i a'); ?></span>
-				<a class="btn btn-mini" href="#" onclick="alert('soon, this will add this to the site'); return false;">add</a>
+				<!--<a class="btn btn-mini" href="#" onclick="alert('tag this \'<?php echo $query_text; ?>\' and \'connectedio\' on Delicious.com to make it stick'); return false;">stick</a>-->
 			  </li>
 			<?php endforeach; ?>
 		</ul>

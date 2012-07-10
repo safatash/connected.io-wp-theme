@@ -5,11 +5,17 @@
 			<h2 class="page-title">/<?php if ($post->post_type == "incsub_wiki"):
 						echo "wiki";
 						else:
-						the_title(); 
+						the_title();
+						edit_post_link('edit',' <small>','</small>'); 
 						endif;	
 				?> 
 				
-				<?php edit_post_link('edit','<small>','</small>'); ?></h2>
+				</h2>
+				
+				<?php if ($post->post_type == "incsub_wiki" || is_page('wiki')): ?>
+				  <center><a class="btn btn-small" href="<?php bloginfo('siteurl');?>/wp-admin/post-new.php?post_type=incsub_wiki">add a wiki page</a></center>
+				<?php endif; ?>
+				
 			<!--<hr style="margin: 0 0 12px" />-->
 			<?php endwhile; endif; ?>
 	
