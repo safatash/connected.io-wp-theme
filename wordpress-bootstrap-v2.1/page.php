@@ -20,8 +20,19 @@
 					
 						<section class="post_content clearfix" itemprop="articleBody">
 							<?php the_content(); ?>
-					
 						</section> <!-- end article section -->
+						
+						<div class="news">
+							<?php if (get_post_meta($post->ID, 'google_news_query', true)):
+						   $query = get_post_meta($post->ID, 'google_news_query', true);
+						  cio_display_feed("https://news.google.com/news/feeds?hl=en&gl=us&q=$query&um=1&ie=UTF-8&output=rss", 10, $query, 'Google News', "https://www.google.com/search?hl=en&gl=us&tbm=nws&q=$query&oq=trans+pa&aq=1&aqi=d1g2d1&aql=&gs_l=news-cc.3.1.43j0l2j43i400.731.1760.0.2983.10.6.0.0.0.0.250.855.2j2j2.6.0...0.0.xEVhOVZ7k-E"); 
+						endif;         ?>   
+		
+						  <?php if (get_post_meta($post->ID, 'wpcf-delicious_tag', true)):
+								  $query = get_post_meta($post->ID, 'wpcf-delicious_tag', true);
+								  cio_display_feed('http://feeds.delicious.com/v2/rss/tag/'. get_post_meta($post->ID, 'wpcf-delicious_tag', true), 10, $query, 'Delicious', 'http://delicious.com/tag/recent/'. get_post_meta($post->ID, 'wpcf-delicious_tag', true));
+								  endif; ?>
+						</div><!-- /.news -->
 						
 						<footer>
 			

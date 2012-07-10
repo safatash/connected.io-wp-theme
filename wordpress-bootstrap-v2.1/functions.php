@@ -58,6 +58,65 @@ You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
+/************* FEEDS ********************/
+
+include_once(ABSPATH . WPINC . '/feed.php');
+function cio_display_feed($feed_url, $count = 100, $query_text, $source_name, $source_url) {
+		// Get a SimplePie feed object from the specified feed source.
+		$rss = fetch_feed($feed_url);
+		if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly 
+			// Figure out how many total items there are, but limit it to 5. 
+			$maxitems = $rss->get_item_quantity($count); 
+
+			// Build an array of all the items, starting with element 0 (first element).
+			$rss_items = $rss->get_items(0, $maxitems); 
+		endif;
+		?> 
+
+		<h3>From <?php echo $source_name; ?></h3>
+
+		<p>searching "<a href="<?php echo $source_url; ?>"><?php echo $query_text; ?></a>"</p>
+
+		<ul class="newsfeed">
+			<?php if ($maxitems == 0) echo '<li>No items.</li>';
+			else
+			// Loop through each feed item and display each item as a hyperlink.
+			foreach ( $rss_items as $item ) : 
+
+			$clean_url = esc_url( $item->get_permalink() );
+
+			if (strpos($clean_url, 'news.google.com')) {
+				$pieces = explode('url=', $clean_url);
+				  $clean_url = $pieces[1];
+			}
+
+			$pieces = explode('http://', $clean_url);
+			$pieces = $pieces[1];
+			$pieces = explode('/', $pieces);
+			$source = $pieces[0];
+
+			if (strpos($source, 'www.')) {
+				$pieces = explode('www.', $source);
+				$source = $pieces[1];
+			}
+
+			?>
+			<li>
+				<a class="newsitem" href='<?php echo $clean_url;  ?>'
+				title='<?php echo 'Posted '.$item->get_date('j F Y | g:i a'); ?>'>
+				<?php echo esc_html( $item->get_title() ); ?></a>
+				<br />
+				<span class="meta">
+				  <?php echo $source; ?><br />
+				<?php echo $item->get_date('F j Y | g:i a'); ?></span>
+				<a class="btn btn-mini" href="#" onclick="alert('soon, this will add this to the site'); return false;">add</a>
+			  </li>
+			<?php endforeach; ?>
+		</ul>
+<?php
+}
+
+
 /************* QUOTES ***************************/
 
 add_action( 'init', 'codex_custom_init' );
