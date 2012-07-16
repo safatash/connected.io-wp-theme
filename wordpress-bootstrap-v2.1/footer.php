@@ -76,7 +76,12 @@
     });
     $('#timeline').height($('#main').height());
     $('#sidebar1').height($('#main').height());
-  })
+  });
+  
+  	/*$('#latest-nav a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+   })*/
 
 
   var words = [
@@ -88,8 +93,7 @@
   	'.transportation',
   	'.cities',
   	'.innovation',
-  	'.innovation',
-  	'.innovation',
+  	'.opportunity',
   	'.io'
   ];
   

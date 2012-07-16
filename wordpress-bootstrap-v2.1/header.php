@@ -1,6 +1,12 @@
 <?php if (!current_user_can('read')) {
 	//header('Location: ./hello.html');
 }
+global $section;
+global $post;
+if (is_page('wiki') || $post->post_type == 'incsub_wiki') {
+  $section = 'wiki';
+}
+
 ?>
 <!doctype html>  
 
@@ -37,10 +43,27 @@
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
 
+    <style type="text/css">
+    body.admin-bar {margin-top: 0!important}
+    
+    .sidebar .nav {
+      margin-bottom: 8px;
+    }
+    
+    .sidebar .nav-tabs a {
+          font-size: 90%;
+    }
+    .sidebar .nav-tabs > .active > a, 
+    .sidebar .nav-tabs > .active > a:hover {
+      background: transparent;
+      border-bottom: 1px solid whiteSmoke;
+    }
+    </style>
+
                <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://blog.connected.io/rss" />
 		
 		<!--<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">-->
-		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css?v=8" rel="stylesheet">
+		<link href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.css?v=9" rel="stylesheet">
 		<!--<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.min.css" rel="stylesheet/less">-->
 
 		
@@ -70,9 +93,57 @@
 		  <a class="brand" id="logo" href="<?php bloginfo('siteurl'); ?>"></a>
 		  <span id="dot-something"></span>
 		  <div class="nav-collapse">
-			<ul class="nav pull-right">
+			
+			<?php if ($section == 'wiki') : ?>
+    		<style type="text/css">
+    		 .rpx_user_icon {
+    		  width: 50px;
+    		 }
+    		 .rpx_user_icon .rpx_author {
+    		  display: none;
+    		 }
+    		 #login {
+    		  padding-top: 12px;
+    		 }
+    		 #login a {
+    		  padding-left: 15px;
+    		  padding-top: 7px;
+    		  display:block;
+    		  float: left;
+    		 }
+    		 </style>
+		
+			<div class="nav pull-right" id="login">
+														 
+		 
+
+		 <?php if (is_user_logged_in()) : ?>
+
+		 
+		  <?php echo do_shortcode('[rpxavatar badge="true" name="false"]'); ?> 
+		  
+		 
+		   <a class="username" href="<?php bloginfo('siteurl');?>/profile"><?php global $current_user; get_currentuserinfo(); echo $current_user->user_login; ?></a> 
+		   <a class="logout" href="<?php echo wp_logout_url(); ?>">logout</a>
+		 
+		 <?php else : ?>
+					 <a href="#" onclick="showRPX('rpxlogin', '', ''); return false;">login</a>				
+	
+		 <?php endif; ?>
+		 
+		</div>
+		
+		<?php else:  // not wiki ?>
+		
+		  <ul class="nav pull-right">
 			  <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 			</ul>
+
+
+		<?php endif; // wiki?>
+
+
+			
 		  </div><!--/.nav-collapse -->
 		</div>
 	  </div>

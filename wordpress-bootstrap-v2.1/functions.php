@@ -60,6 +60,27 @@ you like. Enjoy!
 
 /************* FEEDS ********************/
 
+function get_base_url($url) {
+      $clean_url = esc_url( $url );
+
+			if (strpos($clean_url, 'news.google.com')) {
+				  $pieces = explode('url=', $clean_url);
+				  $clean_url = $pieces[1];
+			}
+
+			$pieces = explode('://', $clean_url);
+			$pieces = $pieces[1];
+			$pieces = explode('/', $pieces);
+			$source = $pieces[0];
+
+			if (strpos($source, 'www.')) {
+				$pieces = explode('www.', $source);
+				$source = $pieces[1];
+			}
+			
+		return $source;
+}
+
 include_once(ABSPATH . WPINC . '/feed.php');
 function cio_display_feed($feed_url, $count = 100, $query_text, $source_name, $source_url) {
 		// Get a SimplePie feed object from the specified feed source.
@@ -75,37 +96,15 @@ function cio_display_feed($feed_url, $count = 100, $query_text, $source_name, $s
 
 		<h3><?php echo $source_name; ?></h3>
 
-    <?php if ($source_name == "Sticky") :  ?>
-				<p><em>Tag links 'connectedio' and '<?php echo $query_text ?>' on Delicious to make them stick.</em></p>
-    <?php else: ?>
-
 		<p><em>searching "<a href="<?php echo $source_url; ?>"><?php echo $query_text; ?></a>"</em></p>
-		
-		<?php endif; ?>
-
-
+  
 		<ul class="newsfeed">
 			<?php if ($maxitems == 0) echo '<li>No items.</li>';
 			else
 			// Loop through each feed item and display each item as a hyperlink.
 			foreach ( $rss_items as $item ) : 
 
-			$clean_url = esc_url( $item->get_permalink() );
-
-			if (strpos($clean_url, 'news.google.com')) {
-				$pieces = explode('url=', $clean_url);
-				  $clean_url = $pieces[1];
-			}
-
-			$pieces = explode('http://', $clean_url);
-			$pieces = $pieces[1];
-			$pieces = explode('/', $pieces);
-			$source = $pieces[0];
-
-			if (strpos($source, 'www.')) {
-				$pieces = explode('www.', $source);
-				$source = $pieces[1];
-			}
+			$source = get_base_url($item->get_permalink());
 
 			?>
 			<li style="margin-bottom: 1em;">
@@ -114,9 +113,8 @@ function cio_display_feed($feed_url, $count = 100, $query_text, $source_name, $s
 				<?php echo esc_html( $item->get_title() ); ?></a>
 				<br />
 				<span class="meta">
-				  <?php echo $source; ?><br />
-				<?php echo $item->get_date('F j Y | g:i a'); ?></span>
-				<!--<a class="btn btn-mini" href="#" onclick="alert('tag this \'<?php echo $query_text; ?>\' and \'connectedio\' on Delicious.com to make it stick'); return false;">stick</a>-->
+				 <?php echo $source; ?>, 
+				<?php echo $item->get_date('F j Y @ g:i a'); ?></span>
 			  </li>
 			<?php endforeach; ?>
 		</ul>
