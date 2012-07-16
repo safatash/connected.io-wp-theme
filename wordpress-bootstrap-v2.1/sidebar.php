@@ -28,7 +28,7 @@
 				</h2>
 				
 				<?php if ($post->post_type == "incsub_wiki" || is_page('wiki') || is_page('links')): ?>
-				  <center><a class="btn btn-small" href="<?php bloginfo('siteurl');?>/wp-admin/post-new.php?post_type=incsub_wiki">add a wiki page</a></center>
+				  <center><a class="btn btn-small" href="<?php bloginfo('siteurl');?>/wiki-add/">add a wiki page</a></center>
 				  <br />
 				<?php endif; ?>
 				

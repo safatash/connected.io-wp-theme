@@ -1,4 +1,4 @@
-<?php
+	<?php
 /*
 Author: Eddie Machado
 URL: htp://themble.com/bones/
@@ -108,7 +108,7 @@ function cio_display_feed($feed_url, $count = 100, $query_text, $source_name, $s
 
 			?>
 			<li style="margin-bottom: 1em;">
-				<a class="newsitem" href='<?php echo $clean_url;  ?>'
+				<a class="newsitem" href='<?php echo $item->get_permalink()  ?>'
 				title='<?php echo 'Posted '.$item->get_date('j F Y | g:i a'); ?>'>
 				<?php echo esc_html( $item->get_title() ); ?></a>
 				<br />
