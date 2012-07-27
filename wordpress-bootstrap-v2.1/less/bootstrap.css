@@ -316,7 +316,7 @@ body.home .subnav {
 /* Timeline / Page
 ---------------------*/
 body.page #main {
-  margin-left: 270px;
+  /*margin-left: 270px;*/
 }
 #timeline {
   /*background-image: url('../img/timeline-bg.png');
@@ -374,18 +374,6 @@ body.page #main {
 header.blog-post {
   background: url('../img/lightbulb.png') left top no-repeat;
   padding-left: 50px;
-}
-/* WIki
------------------------*/
-.incsub_wiki_tabs li.incsub_wiki_link_discussion {
-  display: none !important;
-}
-.incsub_wiki_title {
-  padding: 10px !important;
-}
-.incsub_wiki_content {
-  padding: 15px 0;
-  margin-left: 0!important;
 }
 /* Main Content
 ---------------------*/
@@ -472,7 +460,7 @@ article h1 {
   margin-bottom: .5em !important;
 }
 #disqus_thread {
-  width: 100%;
+  width: 600px;
 }
 .person {
   padding-left: 140px;
@@ -502,7 +490,8 @@ table.people td {
 /* Sidebar
 ----------------*/
 #sidebar1 {
-  position: fixed;
+  /*position: fixed;*/
+
   width: 250px;
 }
 body.page .sidebar {
@@ -530,17 +519,6 @@ footer .contact {
 }
 footer label {
   color: #555;
-}
-footer .widget {
-  width: 100% !important;
-}
-footer .textwidget p {
-  font-size: 70%;
-  color: #bbb;
-}
-footer .textwidget p a {
-  color: #bbb;
-  text-decoration: underline;
 }
 footer hr {
   border: none;
